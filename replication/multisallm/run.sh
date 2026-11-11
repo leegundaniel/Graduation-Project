@@ -44,7 +44,13 @@ use_run() {
   RUN_DIR="$WORK/runs/multisallm/$name"
   for d in "${MUTABLE[@]}"; do
     mkdir -p "$RUN_DIR/$d"
-    if [ -L "$S/$d" ]; then rm "$S/$d"; elif [ -e "$S/$d" ]; then echo "unexpected real folder $S/$d"; exit 1; fi
+    if [ -L "$S/$d" ]; then
+      rm "$S/$d"
+    elif [ -e "$S/$d" ]; then
+      # A real folder here is left over from an interrupted or overlapping run. Its
+      # contents cannot be attributed to a run, so set it aside (tests are re-run).
+      mkdir -p "$WORK/stray" && mv "$S/$d" "$WORK/stray/$(basename "$d").$(date +%s%N)"
+    fi
     ln -s "$RUN_DIR/$d" "$S/$d"
   done
   log "run '$name' -> $RUN_DIR"

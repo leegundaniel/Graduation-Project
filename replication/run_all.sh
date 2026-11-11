@@ -13,6 +13,12 @@
 # one problem does not waste the session. Every stage is resumable: just run it again.
 source "$(dirname "$0")/common/env.sh"
 cd "$REPL"
+# Only one copy at a time: two copies share folders, the GPU and port 8000, and corrupt each other.
+exec 9> "$WORK/run_all.lock"
+if ! flock -n 9; then
+  echo "Another run_all.sh is already running (see: pgrep -fa run_all.sh). Not starting a second one."
+  exit 1
+fi
 LOGS="$WORK/logs"; mkdir -p "$LOGS" "$WORK/results"
 SUMMARY="$WORK/results/run_all_summary.txt"; : > "$SUMMARY"
 
