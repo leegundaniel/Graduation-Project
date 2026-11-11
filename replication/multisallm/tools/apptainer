@@ -1,0 +1,176 @@
+#!/usr/bin/env python3
+"""Native stand-in for `apptainer run`, so Multi-SALLM's own test runner works on Kaggle.
+
+The authors' runner (Evaluation/run_tests_singularity.py) executes every generated
+sample inside a per-prompt Apptainer image built from `<ID>_Dockerfile`. Kaggle can run
+neither Docker nor Apptainer, so this script is put on PATH under the name `apptainer`
+and performs, directly on the host, exactly what the image's CMD does:
+
+  Python image  (python:3.10-slim, pip install <ID>_requirements.txt)
+      CMD ["python", "test_runner.py", "test_<ID>"]            in /prompt
+  Java image    (maven:3.8.6-openjdk-8-slim, mvn dependency:go-offline)
+      CMD ["mvn", "test"]                                      in /app
+
+Everything else (which files are tested, pre-validation, time limits, how results are
+named and parsed) stays in the authors' unmodified runner.
+
+Invocations made by the runner:
+  apptainer run --bind <gen.py>:/prompt/<ID>.py
+                --bind <out.csv>:/prompt/test_<ID>_results.csv  <sif>
+  apptainer run --bind <gen.java>:/app/src/main/java/com/sallm/<T>/<S>/<ID>.java
+                --bind <m2>:/app/.m2  --bind <target>:/app/target  <sif>
+
+Required environment (exported by run.sh):
+  SALLM_ROOT       path of the SALLM clone
+  SALLM_TEST_PY    Python 3.10 interpreter holding the dataset's pinned requirements
+  SALLM_JAVA_HOME  (optional) JDK 8 home used for `mvn test`
+"""
+import glob
+import os
+import shutil
+import signal
+import subprocess
+import sys
+import tempfile
+
+PY_TIMEOUT = 85     # the runner itself gives up after 90 s
+JAVA_TIMEOUT = 170  # the runner itself gives up after 180 s
+
+
+def die(msg, code=2):
+    sys.stderr.write(f"apptainer-shim: {msg}\n")
+    sys.exit(code)
+
+
+def run_limited(cmd, cwd, timeout, env=None):
+    """Run cmd in its own process group; kill the whole group on timeout."""
+    proc = subprocess.Popen(
+        cmd, cwd=cwd, env=env, start_new_session=True,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+    )
+    try:
+        out, _ = proc.communicate(timeout=timeout)
+        return proc.returncode, out.decode("utf-8", "replace")
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        proc.wait()
+        return 124, "timed out"
+
+
+def parse(argv):
+    if not argv or argv[0] != "run":
+        die(f"only `run` is supported, got: {argv[:1]}")
+    binds, rest, i = [], [], 1
+    while i < len(argv):
+        if argv[i] == "--bind":
+            src, dst = argv[i + 1].rsplit(":", 1)
+            binds.append((src, dst))
+            i += 2
+        else:
+            rest.append(argv[i])
+            i += 1
+    return binds, rest
+
+
+def run_python(root, binds):
+    gen = next(s for s, d in binds if d.startswith("/prompt/") and d.endswith(".py"))
+    out = next(s for s, d in binds if d.endswith("_results.csv"))
+    item_id = os.path.basename(next(d for _, d in binds if d.endswith(".py")))[:-3]
+
+    # The runner names extracted files <technique>__<source>__<ID>.py
+    data_dir = None
+    parts = os.path.basename(gen)[:-3].split("__", 2)
+    if len(parts) == 3:
+        technique, source, _ = parts
+        if source == "GitHubDataset":
+            cand = os.path.join(root, "GitHubDataset", "GitHub")
+        else:
+            cand = os.path.join(root, "Dataset", technique, source)
+        if os.path.exists(os.path.join(cand, f"test_{item_id}.py")):
+            data_dir = cand
+    if data_dir is None:
+        hits = glob.glob(os.path.join(root, "Dataset", "*", "*", f"test_{item_id}.py")) + \
+               glob.glob(os.path.join(root, "GitHubDataset", "GitHub", f"test_{item_id}.py"))
+        if not hits:
+            die(f"no dataset test found for {item_id}")
+        data_dir = os.path.dirname(hits[0])
+
+    py = os.environ.get("SALLM_TEST_PY") or die("SALLM_TEST_PY is not set")
+    work = tempfile.mkdtemp(prefix=f"sallm_py_{item_id}_")
+    try:
+        # Same three files the Dockerfile copies into /prompt
+        shutil.copy2(gen, os.path.join(work, f"{item_id}.py"))
+        shutil.copy2(os.path.join(data_dir, f"test_{item_id}.py"), work)
+        shutil.copy2(os.path.join(data_dir, "test_runner.py"), work)
+        env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", HOME=work)
+        env.pop("PYTHONPATH", None)
+        rc, log = run_limited([py, "test_runner.py", f"test_{item_id}"], work, PY_TIMEOUT, env)
+        res = os.path.join(work, f"test_{item_id}_results.csv")
+        if os.path.exists(res):
+            shutil.copyfile(res, out)
+        sys.stdout.write(log[-4000:])
+        return rc
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+
+
+def run_java(root, binds):
+    gen, dst = next((s, d) for s, d in binds if d.endswith(".java"))
+    m2 = next(s for s, d in binds if d == "/app/.m2")
+    target = next(s for s, d in binds if d == "/app/target")
+    rel = os.path.relpath(dst, "/app")                 # src/main/java/com/sallm/<T>/<S>/<ID>.java
+    rel_dir = os.path.dirname(rel)
+    item_id = os.path.basename(rel)[:-5]
+    test_rel = os.path.join(rel_dir.replace("src/main/java", "src/test/java", 1), f"Test{item_id}.java")
+
+    project = None
+    for ds in ("GitHubDatasetJava", "DatasetJava"):
+        if os.path.exists(os.path.join(root, ds, test_rel)):
+            project = os.path.join(root, ds)
+            break
+    if project is None:
+        die(f"no dataset test found for {item_id} ({test_rel})")
+
+    work = tempfile.mkdtemp(prefix=f"sallm_java_{item_id}_")
+    try:
+        shutil.copy2(os.path.join(project, "pom.xml"), work)
+        os.makedirs(os.path.join(work, rel_dir))
+        os.makedirs(os.path.join(work, os.path.dirname(test_rel)))
+        shutil.copy2(gen, os.path.join(work, rel))
+        shutil.copy2(os.path.join(project, test_rel), os.path.join(work, test_rel))
+        env = dict(os.environ)
+        if os.environ.get("SALLM_JAVA_HOME"):
+            env["JAVA_HOME"] = os.environ["SALLM_JAVA_HOME"]
+            env["PATH"] = os.path.join(env["JAVA_HOME"], "bin") + os.pathsep + env["PATH"]
+        repo = os.path.join(m2, "repository")
+        rc, log = run_limited(
+            ["mvn", "-o", "-B", "-q", "test", f"-Dmaven.repo.local={repo}"],
+            work, JAVA_TIMEOUT, env,
+        )
+        reports = os.path.join(work, "target", "surefire-reports")
+        if os.path.isdir(reports):
+            dest = os.path.join(target, "surefire-reports")
+            os.makedirs(dest, exist_ok=True)
+            for f in os.listdir(reports):
+                shutil.copy2(os.path.join(reports, f), dest)
+        sys.stdout.write(log[-4000:])
+        return rc
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+
+
+def main():
+    root = os.environ.get("SALLM_ROOT") or die("SALLM_ROOT is not set")
+    binds, _ = parse(sys.argv[1:])
+    if any(d.startswith("/prompt/") for _, d in binds):
+        sys.exit(run_python(root, binds))
+    if any(d.startswith("/app/") for _, d in binds):
+        sys.exit(run_java(root, binds))
+    die("unrecognised bind layout")
+
+
+if __name__ == "__main__":
+    main()
