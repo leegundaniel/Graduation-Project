@@ -33,9 +33,18 @@ if [ ! -d "$VENVS/cweval" ]; then uv venv -q --python 3.10 "$VENVS/cweval"; fi
 uv pip install -q --python "$VENVS/cweval/bin/python" -r "$CW/requirements/core.txt" litellm openai
 
 log "4/6 Node.js + the npm packages the JS tasks import"
-if ! command -v node >/dev/null 2>&1; then
-  $SUDO apt-get install -y -qq nodejs npm >/dev/null
+# The JS tasks' packages (jsdom, argon2, sqlite3) need Node >= 18; Ubuntu's apt Node is
+# older, so use the official Node 22 binaries unless a recent Node is already present.
+NODE_DIR="$WORK/node-toolchain"
+node_major() { node -v 2>/dev/null | sed 's/^v\([0-9]*\).*/\1/'; }
+if [ -x "$NODE_DIR/bin/node" ]; then export PATH="$NODE_DIR/bin:$PATH"; fi
+if [ "$(node_major || echo 0)" -lt 18 ] 2>/dev/null || ! command -v node >/dev/null 2>&1; then
+  mkdir -p "$NODE_DIR"
+  curl -fsSL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz \
+    | tar -xJ -C "$NODE_DIR" --strip-components=1
+  export PATH="$NODE_DIR/bin:$PATH"
 fi
+echo "   node $(node -v)"
 NODE_PREFIX="$WORK/node_global"
 mkdir -p "$NODE_PREFIX"
 if [ ! -d "$NODE_PREFIX/lib/node_modules/sqlite3" ]; then
@@ -64,7 +73,7 @@ cat > "$WORK/cweval.env" <<ENV
 source "$VENVS/cweval/bin/activate"
 export PYTHONPATH="$CW:\${PYTHONPATH:-}"
 export NODE_PATH="$NODE_PREFIX/lib/node_modules"
-export PATH="$GO_DIR/go/bin:/usr/local/go/bin:\$HOME/go/bin:\$PATH"
+export PATH="$NODE_DIR/bin:$GO_DIR/go/bin:/usr/local/go/bin:\$HOME/go/bin:\$PATH"
 ENV
 
 log "6/6 sanity check: compile and test all reference solutions (the authors' own check)"
