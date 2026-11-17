@@ -10,6 +10,8 @@
 #        t0.8    n=100 samples per task at temperature 0.8  -> Table I row
 #        greedy  1 deterministic sample per task            -> Fig. 3 func@1*, func-sec@1*
 #        t0.2 t0.4 t0.6  the other RQ1 temperatures (Fig. 3 reports the best of the four)
+#        t0.8p1  like t0.8 but with top_p=1.0 instead of the model's default (0.9);
+#                the paper does not state top_p, and a hosted API would default to 1.0
 #   N=100                   samples per task for the sampling settings
 #   GEN_PROCS=4             tasks requested in parallel (each asks for N samples at once)
 #   NPROC=<cores>           parallel test workers
@@ -26,9 +28,10 @@ cd "$CW"
 mkdir -p "$WORK/runs/cweval" && [ -e evals ] || ln -s "$WORK/runs/cweval" evals
 
 eval_path() { echo "evals/llama31_8b_$1"; }
-settings() {  # -> "<n> <temperature>"
+settings() {  # -> "<n> <temperature> [extra generate.py flags]"
   case "$1" in
     greedy) echo "1 0";;
+    t0.*p1) local t="${1#t}"; echo "$N ${t%p1} --top_p 1.0";;
     t0.*)   echo "$N ${1#t}";;
     *) echo "unknown config $1" >&2; exit 1;;
   esac
@@ -38,14 +41,14 @@ case "${1:-}" in
   generate)
     export OPENAI_API_KEY="${OPENAI_API_KEY:-EMPTY}"   # the local server ignores it
     for cfg in $CONFIGS; do
-      read -r n temp <<<"$(settings "$cfg")"
+      read -r n temp extra <<<"$(settings "$cfg")"
       ep="$(eval_path "$cfg")"
-      log "generate $cfg: n=$n, temperature=$temp -> $ep"
+      log "generate $cfg: n=$n, temperature=$temp ${extra:-} -> $ep"
       # The authors' script asks before reusing a folder; answering yes resumes, because it
       # skips every task whose n samples are already on disk.
       echo y | python cweval/generate.py gen --n "$n" --temperature "$temp" \
         --num_proc "$GEN_PROCS" --eval_path "$ep" \
-        --model "openai/$LLAMA_MODEL" --api_base "http://localhost:$VLLM_PORT/v1" --timeout 7200
+        --model "openai/$LLAMA_MODEL" --api_base "http://localhost:$VLLM_PORT/v1" --timeout 7200 ${extra:-}
       missing=$(( 119 * n - $(find "$ep" -name '*_raw.*' | wc -l) ))
       if [ "$missing" -ne 0 ]; then
         echo "WARNING: $missing of $((119 * n)) samples are missing in $ep; re-run generate to fill them."

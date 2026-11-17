@@ -5,9 +5,11 @@ Reads <evals>/llama31_8b_<config>/res_all.json, which the authors' evaluate.py w
 and recomputes func@k / func-sec@k with the same unbiased pass@k estimator they use
 (cweval/commons.py: pass_at_k), averaged over the 119 tasks.
 
-The +/- column is a rough 95% band for two independent runs of the same model over 119
-tasks, 2*sqrt(2*p*(1-p)/119). It ignores that tasks differ in difficulty, so read it as
-an order of magnitude, not a test.
+The +/- column, 2*sqrt(2*p*(1-p)/119), treats each task as one coin flip. That is far too
+wide when n=100 samples per task: the same 119 tasks are used in both runs, and with
+100 samples each, sampling moves func@1 by well under one point. Use the column only for
+the greedy setting (n=1); for n=100, a consistent shift of several points in one
+direction is a real difference in setup, not chance.
 """
 import argparse
 import json
@@ -61,10 +63,12 @@ def main():
     if not ours:
         lines.append("No res_all.json found. Did `run.sh evaluate` finish?")
 
-    for cfg in ("t0.8", "greedy"):
+    for cfg in ("t0.8", "t0.8p1", "greedy"):
         if cfg not in ours:
             continue
-        m, t = ours[cfg], targets[cfg]
+        m, t = ours[cfg], targets["t0.8" if cfg == "t0.8p1" else cfg]
+        if cfg == "t0.8p1":
+            t = dict(t, where=t["where"] + "; ours with top_p=1.0")
         lines += [f"## {cfg}: {t['where']}", "",
                   f"Ours: {m['tasks']} tasks, n={m['n']} samples per task.", "",
                   "| metric | paper | ours | diff | +/- band | inside |", "|---|---|---|---|---|---|"]
