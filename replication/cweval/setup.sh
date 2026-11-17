@@ -47,10 +47,17 @@ fi
 echo "   node $(node -v)"
 NODE_PREFIX="$WORK/node_global"
 mkdir -p "$NODE_PREFIX"
-if [ ! -d "$NODE_PREFIX/lib/node_modules/sqlite3" ]; then
+# Two packages are pinned to the versions of the authors' Docker image (late 2024):
+#   node-rsa 2.x (2025) changed its API, so `new NodeRSA(...)` throws "not a constructor";
+#   sqlite3 6.x prebuilt binaries do not load on Kaggle's image; 5.1.7 does.
+# Everything else is installed as in the upstream Dockerfile (latest).
+if [ ! -f "$NODE_PREFIX/.pinned-v1" ]; then
   npm install -g --silent --prefix "$NODE_PREFIX" \
-    escape-html node-rsa argon2 escape-string-regexp lodash js-yaml jsonwebtoken jsdom xpath sqlite3
+    escape-html node-rsa@1.1.1 argon2 escape-string-regexp lodash js-yaml jsonwebtoken jsdom xpath sqlite3@5.1.7
+  touch "$NODE_PREFIX/.pinned-v1"
 fi
+NODE_PATH="$NODE_PREFIX/lib/node_modules" node -e \
+  "new (require('node-rsa'))({b:512}); require('sqlite3'); console.log('   node-rsa and sqlite3 load')"
 
 log "5/6 Go toolchain + modules"
 GO_DIR="$WORK/go-toolchain"
