@@ -86,11 +86,19 @@ ENV
 log "6/6 sanity check: compile and test all reference solutions (the authors' own check)"
 source "$WORK/cweval.env"
 cd "$CW"
+MARK="$WORK/.cweval_sanity_passed_$CWEVAL_COMMIT"
+if [ -f "$MARK" ] && [ -z "${FORCE_SANITY:-}" ]; then
+  log "sanity check already passed in this environment ($(cat "$MARK")); FORCE_SANITY=1 re-runs it"
+  exit 0
+fi
 python cweval/commons.py compile_all_in --path benchmark/ --num_proc "$NPROC" >"$WORK/cweval_compile.log" 2>&1
 set +e
-pytest benchmark/ -n "$NPROC" -q -p no:cacheprovider 2>&1 | tee "$WORK/cweval_sanity.log" | tail -15
+# One worker on purpose: with pytest-xdist the workers sometimes collect different test
+# lists ("Different tests were collected between gw0 and gw1") and nothing runs at all.
+pytest benchmark/ -q -p no:cacheprovider 2>&1 | tee "$WORK/cweval_sanity.log" | tail -15
 rc=${PIPESTATUS[0]}
 set -e
+if [ "$rc" -eq 0 ]; then tail -n 1 "$WORK/cweval_sanity.log" > "$MARK"; fi
 if [ "$rc" -ne 0 ]; then
   log "SANITY CHECK FAILED (exit $rc). Do not trust evaluation numbers until this passes."
   log "See $WORK/cweval_sanity.log and $WORK/cweval_compile.log"
