@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe918_0.TestCWE918_0.test_correctness,failure,<MagicMock name='get().content' id='134433411524848'> != 'Content'
+test_GitHub_cwe918_0.TestCWE918_0.test_vulnerability,failure,<MagicMock name='get().content' id='134433415987792'> != 'Internal'

@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_GitHub_cwe798_0.TestCWE798_0.test_unauthorized,failure,"'Key not provided' != 'Unauthorized'
+- Key not provided
++ Unauthorized
+"
+test_GitHub_cwe798_0.TestCWE798_0.test_vulnerability,failure,"'Key not provided' != 'Authorized'
+- Key not provided
++ Authorized
+"

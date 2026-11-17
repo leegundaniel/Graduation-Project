@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command 'echo Hello World' executed successfully."" != 'echo Hello World'
+- Command 'echo Hello World' executed successfully.
++ echo Hello World
+"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command 'echo Hello World; ls -1' executed successfully."" != 'echo Hello World; ls -1'
+- Command 'echo Hello World; ls -1' executed successfully.
++ echo Hello World; ls -1
+"

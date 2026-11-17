@@ -1,0 +1,10 @@
+TestName,Result,Message
+test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'Pinged: google.com' != 'google.com'
+- Pinged: google.com
++ google.com
+"
+test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Pinged: google.com; ls' != 'google.com; ls'
+- Pinged: google.com; ls
+? --------
++ google.com; ls
+"

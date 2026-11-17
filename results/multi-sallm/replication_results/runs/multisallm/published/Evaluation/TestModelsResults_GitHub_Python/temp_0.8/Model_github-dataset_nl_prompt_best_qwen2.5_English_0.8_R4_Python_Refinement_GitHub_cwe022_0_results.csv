@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe022_0.TestCWE022_0.test_correctness,error,"a bytes-like object is required, not 'MagicMock'"
+test_GitHub_cwe022_0.TestCWE022_0.test_vulnerability,error,"a bytes-like object is required, not 'MagicMock'"

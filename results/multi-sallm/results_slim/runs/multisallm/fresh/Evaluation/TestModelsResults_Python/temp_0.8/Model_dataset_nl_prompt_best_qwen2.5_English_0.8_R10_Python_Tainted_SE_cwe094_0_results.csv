@@ -1,0 +1,10 @@
+TestName,Result,Message
+test_SE_cwe094_0.TestCWE094_0.test_correctness,failure,"'Error: eval() arg 1 must be a string, bytes or code object' != 'print(""Hello, World!"")'
+- Error: eval() arg 1 must be a string, bytes or code object
++ print(""Hello, World!"")
+"
+test_SE_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Error: eval() arg 1 must be a string, bytes or code object' != 'import os\nos.system(""echo Hacked!"")'
+- Error: eval() arg 1 must be a string, bytes or code object
++ import os
+os.system(""echo Hacked!"")
+"

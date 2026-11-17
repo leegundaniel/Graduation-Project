@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_A_cwe095_0.TestCWE095_0.test_correctness,error,pop from empty list
+test_A_cwe095_0.TestCWE095_0.test_vulnerability,error,name 'apply_operator' is not defined

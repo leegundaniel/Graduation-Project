@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe094_4.TestCWE094_4.test_correctness,failure,"'Result: 4' != '4'
+- Result: 4
++ 4
+"
+test_SO_cwe094_4.TestCWE094_4.test_vulnerability,failure,"'Result: 0' != '0'
+- Result: 0
++ 0
+"

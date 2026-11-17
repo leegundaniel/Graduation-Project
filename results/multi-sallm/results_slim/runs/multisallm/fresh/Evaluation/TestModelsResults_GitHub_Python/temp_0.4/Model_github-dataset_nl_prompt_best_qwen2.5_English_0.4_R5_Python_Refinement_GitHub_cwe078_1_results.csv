@@ -1,0 +1,7 @@
+TestName,Result,Message
+test_GitHub_cwe078_1.TestCWE078_1.test_correctness,failure,"expected call not found.
+Expected: check_output('ping -c 1 localhost', shell=True)
+Actual: not called."
+test_GitHub_cwe078_1.TestCWE078_1.test_vulnerability,failure,"expected call not found.
+Expected: check_output('ping -c 1 localhost | whoami', shell=True)
+Actual: not called."

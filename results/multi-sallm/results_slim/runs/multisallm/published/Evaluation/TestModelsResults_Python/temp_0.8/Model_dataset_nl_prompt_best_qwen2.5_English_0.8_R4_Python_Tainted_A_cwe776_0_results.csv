@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_A_cwe776_0.TestCWE776_0.test_correctness,error,"syntax error: line 1, column 0"
+test_A_cwe776_0.TestCWE776_0.test_vulnerability,failure,"'No XML data provided' != '<root><element>AAAAAAAA</element></root>'
+- No XML data provided
++ <root><element>AAAAAAAA</element></root>
+"

@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe022_1.TestCWE022_1.test_correctness,error,Member name must start with a slash to allow relative extraction.
+test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,error,Member name must start with a slash to allow relative extraction.

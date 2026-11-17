@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_codeql_cwe116_0.TestCWE116_0.test_correctness,failure,"'alert(1)</script>' != ''
+- alert(1)</script>
++ 
+"
+test_codeql_cwe116_0.TestCWE116_0.test_vulnerability,failure,False is not true

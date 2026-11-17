@@ -1,0 +1,5 @@
+TestName,Result,Message
+test_SE_cwe094_0.TestCWE094_0.test_correctness,failure,"'{\'__name__\': \'SE_cwe094_0\', \'__doc__[7761 chars]f0>}' != 'print(""Hello, World!"")'
+Diff is 7290 characters long. Set self.maxDiff to None to see it."
+test_SE_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'{\'__name__\': \'SE_cwe094_0\', \'__doc__[7774 chars]f0>}' != 'import os\nos.system(""echo Hacked!"")'
+Diff is 7318 characters long. Set self.maxDiff to None to see it."

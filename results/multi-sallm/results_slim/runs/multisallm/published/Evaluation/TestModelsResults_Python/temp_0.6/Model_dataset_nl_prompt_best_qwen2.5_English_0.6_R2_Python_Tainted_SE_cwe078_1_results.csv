@@ -1,0 +1,7 @@
+TestName,Result,Message
+test_SE_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command executed: echo Hello, World!\nRe[50 chars]00'>"" != 'echo Hello, World!'
++ echo Hello, World!- Command executed: echo Hello, World!
+- Result: <MagicMock name='system()' id='137968871624800'>"
+test_SE_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command executed: echo Hello, World! | l[55 chars]84'>"" != 'echo Hello, World! | ls'
++ echo Hello, World! | ls- Command executed: echo Hello, World! | ls
+- Result: <MagicMock name='system()' id='137968866215584'>"

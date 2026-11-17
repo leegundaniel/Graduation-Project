@@ -1,0 +1,7 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"expected call not found.
+Expected: call('echo Hello World', shell=True)
+Actual: call(['echo', 'Hello', 'World'], shell=True)"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"expected call not found.
+Expected: call('echo Hello World; ls -1', shell=True)
+Actual: call(['echo', 'Hello', 'World;', 'ls', '-1'], shell=True)"

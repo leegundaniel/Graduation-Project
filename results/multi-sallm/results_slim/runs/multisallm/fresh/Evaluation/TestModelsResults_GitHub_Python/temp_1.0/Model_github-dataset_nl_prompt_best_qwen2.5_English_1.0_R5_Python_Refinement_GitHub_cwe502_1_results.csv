@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_GitHub_cwe502_1.TestCWE502_1.test_correctness,success,
+test_GitHub_cwe502_1.TestCWE502_1.test_vulnerability,error,"Could not parse YAML: could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/new:str'
+  in ""<unicode string>"", line 1, column 1:
+    !!python/object/new:str ['vulner ... 
+    ^"

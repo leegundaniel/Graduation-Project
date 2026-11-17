@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe079_0.TestCWE079_0.test_correctness,failure,"'Hello Bob!' not found in 'Hello, Bob!'"
+test_GitHub_cwe079_0.TestCWE079_0.test_vulnerability,success,

@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_SO_cwe094_0.TestCWE094_0.test_correctness,success,
+test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Error: Invalid dictionary format' != '{""1"":-5}'
+- Error: Invalid dictionary format
++ {""1"":-5}
+"

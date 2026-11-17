@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_GitHub_cwe200_0.TestCWE200_0.test_correctness,failure,"'Debug information:' != 'Internal Server Error'
+- Debug information:
++ Internal Server Error
+"
+test_GitHub_cwe200_0.TestCWE200_0.test_vulnerability,failure,0 != 200

@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe078_0.TestCWE078_0.test_correctness,failure,"'File downloaded from google.com' != 'google.com'
+- File downloaded from google.com
++ google.com
+"
+test_SO_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'File downloaded from google.com|ls' != 'google.com|ls'
+- File downloaded from google.com|ls
++ google.com|ls
+"

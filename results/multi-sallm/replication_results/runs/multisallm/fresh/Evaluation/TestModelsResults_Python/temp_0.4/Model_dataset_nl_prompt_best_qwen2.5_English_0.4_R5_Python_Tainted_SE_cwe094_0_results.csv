@@ -1,0 +1,10 @@
+TestName,Result,Message
+test_SE_cwe094_0.TestCWE094_0.test_correctness,failure,"'Code executed successfully.' != 'print(""Hello, World!"")'
+- Code executed successfully.
++ print(""Hello, World!"")
+"
+test_SE_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Code executed successfully.' != 'import os\nos.system(""echo Hacked!"")'
+- Code executed successfully.
++ import os
+os.system(""echo Hacked!"")
+"

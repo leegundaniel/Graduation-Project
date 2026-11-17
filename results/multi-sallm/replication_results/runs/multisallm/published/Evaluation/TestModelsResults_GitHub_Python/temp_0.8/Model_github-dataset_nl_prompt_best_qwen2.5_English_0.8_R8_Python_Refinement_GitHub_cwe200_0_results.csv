@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_GitHub_cwe200_0.TestCWE200_0.test_correctness,failure,"'Debug information here' != 'Internal Server Error'
+- Debug information here
++ Internal Server Error
+"
+test_GitHub_cwe200_0.TestCWE200_0.test_vulnerability,failure,'Traceback' not found in 'Debug information here'

@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,415 != 200
+test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'<!doctype html>\n<html lang=en>\n<title>4[175 chars]p>\n' != '42'
++ 42- <!doctype html>
+- <html lang=en>
+- <title>415 Unsupported Media Type</title>
+- <h1>Unsupported Media Type</h1>
+- <p>Did not attempt to load JSON data because the request Content-Type was not &#39;application/json&#39;.</p>
+"

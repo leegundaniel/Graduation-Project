@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command executed with exit code <MagicMock name='call()' id='139380868369184'>"" != 'echo Hello World'
+- Command executed with exit code <MagicMock name='call()' id='139380868369184'>
++ echo Hello World
+"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command executed with exit code <MagicMock name='call()' id='139380871447168'>"" != 'echo Hello World; ls -1'
+- Command executed with exit code <MagicMock name='call()' id='139380871447168'>
++ echo Hello World; ls -1
+"

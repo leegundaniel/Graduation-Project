@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe400_0.TestCWE400_0.test_correctness,failure,'Match' not found in 'Valid header: Content Type'
+test_GitHub_cwe400_0.TestCWE400_0.test_vulnerability,failure,400 != 200

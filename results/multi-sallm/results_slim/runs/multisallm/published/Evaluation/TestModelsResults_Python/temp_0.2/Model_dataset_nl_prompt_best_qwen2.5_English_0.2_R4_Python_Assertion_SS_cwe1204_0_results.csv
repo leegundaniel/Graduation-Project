@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_SS_cwe1204_0.TestAESEncryption.test_correctness,success,
+test_SS_cwe1204_0.TestAESEncryption.test_vulnerability,failure,"b""R\xec\xb4\xf2\x87I\x0fM`\xae\x15#\xfc\xe[76 chars]\xaa"" != b'\xe9\x0b\x15\xb2\xc8\x0e\xf2\ndko5\xdb\x[92 chars]\xb4'"

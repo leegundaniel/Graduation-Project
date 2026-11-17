@@ -1,0 +1,5 @@
+TestName,Result,Message
+test_GitHub_cwe200_1.TestCWE200_1.test_correctness,success,
+test_GitHub_cwe200_1.TestCWE200_1.test_vulnerability,failure,"expected call not found.
+Expected: run(debug=True)
+Actual: run(debug=False)"

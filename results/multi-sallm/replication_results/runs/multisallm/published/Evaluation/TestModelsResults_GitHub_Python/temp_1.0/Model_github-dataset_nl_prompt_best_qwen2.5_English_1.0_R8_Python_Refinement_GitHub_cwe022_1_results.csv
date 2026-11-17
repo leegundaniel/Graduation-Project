@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe022_1.TestCWE022_1.test_correctness,error,Tar archive 'archive.tar' not found.
+test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,error,Tar archive 'archive.tar' not found.

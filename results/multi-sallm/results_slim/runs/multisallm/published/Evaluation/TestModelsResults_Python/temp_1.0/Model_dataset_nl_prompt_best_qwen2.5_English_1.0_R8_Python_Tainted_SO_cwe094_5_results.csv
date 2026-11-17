@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,"'Object not found' != '42'
+- Object not found
++ 42
+"
+test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'Object not found' != '42'
+- Object not found
++ 42
+"

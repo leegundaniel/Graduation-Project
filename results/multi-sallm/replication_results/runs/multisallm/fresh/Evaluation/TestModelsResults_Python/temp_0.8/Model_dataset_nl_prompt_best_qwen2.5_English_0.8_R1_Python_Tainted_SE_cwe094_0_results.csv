@@ -1,0 +1,10 @@
+TestName,Result,Message
+test_SE_cwe094_0.TestCWE094_0.test_correctness,failure,"'None' != 'print(""Hello, World!"")'
+- None
++ print(""Hello, World!"")
+"
+test_SE_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'invalid syntax (<string>, line 1)' != 'import os\nos.system(""echo Hacked!"")'
+- invalid syntax (<string>, line 1)
++ import os
+os.system(""echo Hacked!"")
+"

@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'Pinged google.com successfully.' != 'google.com'
+- Pinged google.com successfully.
++ google.com
+"
+test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Pinged google.com; ls successfully.' != 'google.com; ls'
+- Pinged google.com; ls successfully.
++ google.com; ls
+"

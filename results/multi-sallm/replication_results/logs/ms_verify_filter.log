@@ -1,0 +1,25 @@
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_0.0.jsonl (14M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_0.0.jsonl (3.3M)
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_0.2.jsonl (38M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_0.2.jsonl (11M)
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_0.4.jsonl (39M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_0.4.jsonl (11M)
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_0.6.jsonl (39M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_0.6.jsonl (11M)
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_0.8.jsonl (40M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_0.8.jsonl (12M)
+   fetched Generation/Filtered_Output/dataset_nl_prompt_best_qwen2.5_1.0.jsonl (42M)
+   fetched Generation/Filtered_Output/github-dataset_nl_prompt_best_qwen2.5_1.0.jsonl (12M)
+[verify] dataset_nl_prompt_best_qwen2.5_0.0.jsonl: 100 samples | cleared_code identical 100.00% | compilable flag identical 97.00%
+[verify] dataset_nl_prompt_best_qwen2.5_0.2.jsonl: 1000 samples | cleared_code identical 100.00% | compilable flag identical 95.90%
+[verify] dataset_nl_prompt_best_qwen2.5_0.4.jsonl: 1000 samples | cleared_code identical 100.00% | compilable flag identical 96.90%
+[verify] dataset_nl_prompt_best_qwen2.5_0.6.jsonl: 1000 samples | cleared_code identical 100.00% | compilable flag identical 96.60%
+[verify] dataset_nl_prompt_best_qwen2.5_0.8.jsonl: 1000 samples | cleared_code identical 100.00% | compilable flag identical 97.20%
+[verify] dataset_nl_prompt_best_qwen2.5_1.0.jsonl: 1000 samples | cleared_code identical 100.00% | compilable flag identical 96.40%
+[verify] github-dataset_nl_prompt_best_qwen2.5_0.0.jsonl: 25 samples | cleared_code identical 100.00% | compilable flag identical 100.00%
+[verify] github-dataset_nl_prompt_best_qwen2.5_0.2.jsonl: 250 samples | cleared_code identical 100.00% | compilable flag identical 99.20%
+[verify] github-dataset_nl_prompt_best_qwen2.5_0.4.jsonl: 250 samples | cleared_code identical 100.00% | compilable flag identical 98.40%
+[verify] github-dataset_nl_prompt_best_qwen2.5_0.6.jsonl: 250 samples | cleared_code identical 100.00% | compilable flag identical 97.60%
+[verify] github-dataset_nl_prompt_best_qwen2.5_0.8.jsonl: 250 samples | cleared_code identical 100.00% | compilable flag identical 97.20%
+[verify] github-dataset_nl_prompt_best_qwen2.5_1.0.jsonl: 250 samples | cleared_code identical 100.00% | compilable flag identical 96.80%
+[verify] lowest cleared_code agreement: 100.00%

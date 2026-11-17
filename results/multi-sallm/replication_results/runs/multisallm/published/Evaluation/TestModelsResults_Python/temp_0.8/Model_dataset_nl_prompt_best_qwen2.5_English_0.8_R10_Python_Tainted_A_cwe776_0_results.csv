@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe776_0.TestCWE776_0.test_correctness,error,"syntax error: line 1, column 0"
+test_A_cwe776_0.TestCWE776_0.test_vulnerability,failure,"'<!doctype html>\n<html lang=en>\n<title>40[126 chars]p>\n' != '<root><element>AAAAAAAA</element></root>'
++ <root><element>AAAAAAAA</element></root>- <!doctype html>
+- <html lang=en>
+- <title>400 Bad Request</title>
+- <h1>Bad Request</h1>
+- <p>The browser (or proxy) sent a request that this server could not understand.</p>
+"

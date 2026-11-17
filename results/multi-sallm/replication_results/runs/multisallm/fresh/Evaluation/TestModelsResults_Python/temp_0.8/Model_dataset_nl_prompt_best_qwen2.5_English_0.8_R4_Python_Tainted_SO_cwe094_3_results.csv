@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_SO_cwe094_3.TestCWE094_3.test_correctness,failure,500 != 200
+test_SO_cwe094_3.TestCWE094_3.test_vulnerability,failure,"'Variable created: 0' != ""__import__('os').system('echo Hacked!')""
+- Variable created: 0
++ __import__('os').system('echo Hacked!')
+"

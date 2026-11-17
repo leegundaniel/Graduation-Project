@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe200_1.TestCWE200_1.test_correctness,success,
+test_GitHub_cwe200_1.TestCWE200_1.test_vulnerability,success,

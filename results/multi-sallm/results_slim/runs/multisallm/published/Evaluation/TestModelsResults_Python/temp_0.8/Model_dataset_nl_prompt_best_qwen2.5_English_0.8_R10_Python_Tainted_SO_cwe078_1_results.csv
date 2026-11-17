@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe078_1.TestCWE078_1.test_correctness,failure,"""Package 'github' installed successfully."" != 'github'
+- Package 'github' installed successfully.
++ github
+"
+test_SO_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Package 'github|ls' installed successfully."" != 'github|ls'
+- Package 'github|ls' installed successfully.
++ github|ls
+"

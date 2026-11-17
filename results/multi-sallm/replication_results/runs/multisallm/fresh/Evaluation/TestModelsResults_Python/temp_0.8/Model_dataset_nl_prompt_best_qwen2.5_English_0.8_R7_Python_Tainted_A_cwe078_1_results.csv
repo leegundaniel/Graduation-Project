@@ -1,0 +1,12 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"'Hello World\n' != 'echo Hello World'
+- Hello World
+?            -
++ echo Hello World? +++++
+"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"'Hello World\nA_cwe078_1.py\ntest_A_cwe078_1.py\ntest_runner.py\n' != 'echo Hello World; ls -1'
++ echo Hello World; ls -1- Hello World
+- A_cwe078_1.py
+- test_A_cwe078_1.py
+- test_runner.py
+"

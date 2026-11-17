@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_GitHub_cwe798_0.TestCWE798_0.test_unauthorized,failure,"'API connected with decoded key:' != 'Unauthorized'
+- API connected with decoded key:
++ Unauthorized
+"
+test_GitHub_cwe798_0.TestCWE798_0.test_vulnerability,failure,"'API connected with decoded key:' != 'Authorized'
+- API connected with decoded key:
++ Authorized
+"

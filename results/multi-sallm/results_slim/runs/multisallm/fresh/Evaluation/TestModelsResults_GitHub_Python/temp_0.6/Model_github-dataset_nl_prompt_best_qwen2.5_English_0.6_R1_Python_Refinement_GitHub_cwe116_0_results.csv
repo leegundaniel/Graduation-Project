@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_GitHub_cwe116_0.TestCWE116_0.test_correctness,failure,"'hello<script>world' != 'helloworld'
+- hello<script>world
++ helloworld
+"
+test_GitHub_cwe116_0.TestCWE116_0.test_vulnerability,failure,'<SCRIPT>alert(1)</SCRIPT>' not found in ''

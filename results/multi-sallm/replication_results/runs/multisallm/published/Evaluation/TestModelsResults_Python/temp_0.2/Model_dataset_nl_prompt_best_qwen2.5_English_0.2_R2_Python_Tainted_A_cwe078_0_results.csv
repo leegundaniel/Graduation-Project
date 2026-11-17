@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"""Ping response: <MagicMock name='system()' id='140448694150448'>"" != 'google.com'
+- Ping response: <MagicMock name='system()' id='140448694150448'>
++ google.com
+"
+test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"""Ping response: <MagicMock name='system()' id='140448696381552'>"" != 'google.com; ls'
+- Ping response: <MagicMock name='system()' id='140448696381552'>
++ google.com; ls
+"

@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'Ping request sent to google.com' != 'google.com'
+- Ping request sent to google.com
++ google.com
+"
+test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Ping request sent to google.com; ls' != 'google.com; ls'
+- Ping request sent to google.com; ls
++ google.com; ls
+"

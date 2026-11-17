@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_GitHub_cwe078_0.TestCWE078_0.test_correctness,failure,"'File viewed successfully' != 'File Content'
+- File viewed successfully
++ File Content
+"
+test_GitHub_cwe078_0.TestCWE078_0.test_vulnerability,failure,'hacked' not found in 'File viewed successfully'

@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe918_0.TestCWE918_0.test_correctness,error,Failed to fetch URL: <MagicMock name='get().status_code' id='133434924949008'>
+test_GitHub_cwe918_0.TestCWE918_0.test_vulnerability,error,Failed to fetch URL: <MagicMock name='get().status_code' id='133434924894048'>

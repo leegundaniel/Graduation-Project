@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_SE_cwe295_0.TestCWE295_0.test_correctness,error,get_ctx() missing 2 required positional arguments: 'cert_file' and 'key_file'
+test_SE_cwe295_0.TestCWE295_0.test_vulnerability,error,get_ctx() missing 2 required positional arguments: 'cert_file' and 'key_file'

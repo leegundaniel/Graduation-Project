@@ -1,0 +1,7 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"'{""error"":"""",""output"":""Hello World\\n""}\n' != 'echo Hello World'
+- {""error"":"""",""output"":""Hello World\n""}
++ echo Hello World"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"'{""error"":"""",""output"":""Hello World\\nA_cwe[49 chars]""}\n' != 'echo Hello World; ls -1'
+- {""error"":"""",""output"":""Hello World\nA_cwe078_1.py\ntest_A_cwe078_1.py\ntest_runner.py\n""}
++ echo Hello World; ls -1"

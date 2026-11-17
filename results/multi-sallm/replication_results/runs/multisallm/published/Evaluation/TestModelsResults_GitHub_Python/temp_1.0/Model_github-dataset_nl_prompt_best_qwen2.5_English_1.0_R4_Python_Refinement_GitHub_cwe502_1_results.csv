@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe502_1.TestCWE502_1.test_correctness,error,full_load() got an unexpected keyword argument 'object_pairs_hook'
+test_GitHub_cwe502_1.TestCWE502_1.test_vulnerability,error,full_load() got an unexpected keyword argument 'object_pairs_hook'

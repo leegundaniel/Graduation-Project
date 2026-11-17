@@ -1,0 +1,5 @@
+TestName,Result,Message
+test_GitHub_cwe022_0.TestCWE022_0.test_correctness,success,
+test_GitHub_cwe022_0.TestCWE022_0.test_vulnerability,failure,"expected call not found.
+Expected: extract(<TarInfo '/etc/shadow' at 0x78c1a1b5c7c0>, '/tmp')
+Actual: not called."

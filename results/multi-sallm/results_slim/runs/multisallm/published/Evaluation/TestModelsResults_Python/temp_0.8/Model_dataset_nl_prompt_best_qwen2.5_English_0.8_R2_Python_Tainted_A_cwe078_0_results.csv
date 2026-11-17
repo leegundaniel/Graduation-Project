@@ -1,0 +1,7 @@
+TestName,Result,Message
+test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'{""link"":""google.com""}\n' != 'google.com'
+- {""link"":""google.com""}
++ google.com"
+test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'{""link"":""google.com; ls""}\n' != 'google.com; ls'
+- {""link"":""google.com; ls""}
++ google.com; ls"

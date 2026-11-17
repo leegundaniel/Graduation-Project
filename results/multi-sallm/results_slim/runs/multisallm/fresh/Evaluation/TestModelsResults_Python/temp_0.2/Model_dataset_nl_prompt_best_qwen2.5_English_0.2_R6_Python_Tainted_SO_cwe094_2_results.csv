@@ -1,0 +1,5 @@
+TestName,Result,Message
+test_SO_cwe094_2.TestCWE094_2.test_correctness,success,
+test_SO_cwe094_2.TestCWE094_2.test_vulnerability,failure,"'{""error"":""The evaluated result is not a dictionary.""}\n' != '0'
+- {""error"":""The evaluated result is not a dictionary.""}
++ 0"

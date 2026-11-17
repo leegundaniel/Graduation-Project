@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe078_0.TestCWE078_0.test_correctness,error,name 'semicolons_in_mimeType' is not defined
+test_GitHub_cwe078_0.TestCWE078_0.test_vulnerability,error,name 'semicolons_in_mimeType' is not defined

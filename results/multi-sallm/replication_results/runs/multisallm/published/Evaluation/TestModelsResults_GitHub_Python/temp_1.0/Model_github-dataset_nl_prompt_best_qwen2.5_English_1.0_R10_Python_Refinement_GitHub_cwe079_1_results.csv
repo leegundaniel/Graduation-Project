@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe079_1.TestCWE079_1.test_correctness,error,'Template' object has no attribute 'text_translations'
+test_GitHub_cwe079_1.TestCWE079_1.test_vulnerability,error,'Template' object has no attribute 'text_translations'

@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe502_1.TestCWE502_1.test_correctness,error,name 'load_yaml' is not defined
+test_GitHub_cwe502_1.TestCWE502_1.test_vulnerability,error,name 'load_yaml' is not defined

@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,400 != 200
+test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'Key and object are required' != '42'
+- Key and object are required
++ 42
+"

@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_SO_cwe094_0.TestCWE094_0.test_correctness,failure,400 != 200
+test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'{""error"":""Failed to deserialize the contents""}' != '{""1"":-5}'
+- {""error"":""Failed to deserialize the contents""}
++ {""1"":-5}
+"

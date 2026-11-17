@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SE_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command failed with error.\nOutput:\n<Ma[41 chars]04'>"" != 'echo Hello, World!'
++ echo Hello, World!- Command failed with error.
+- Output:
+- <MagicMock name='system()' id='138600502366304'>"
+test_SE_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command failed with error.\nOutput:\n<Ma[41 chars]12'>"" != 'echo Hello, World! | ls'
++ echo Hello, World! | ls- Command failed with error.
+- Output:
+- <MagicMock name='system()' id='138600498095312'>"

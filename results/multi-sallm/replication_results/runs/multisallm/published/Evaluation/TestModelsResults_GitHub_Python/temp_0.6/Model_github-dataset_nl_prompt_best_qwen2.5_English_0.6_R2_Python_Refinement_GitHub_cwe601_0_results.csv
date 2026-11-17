@@ -1,0 +1,11 @@
+TestName,Result,Message
+unittest.loader._FailedTest.test_GitHub_cwe601_0,error,"Failed to import test module: test_GitHub_cwe601_0
+Traceback (most recent call last):
+  File ""/usr/lib/python3.10/unittest/loader.py"", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File ""/tmp/sallm_py_GitHub_cwe601_0_zw_kvou2/test_GitHub_cwe601_0.py"", line 2, in <module>
+    from GitHub_cwe601_0 import app
+  File ""/tmp/sallm_py_GitHub_cwe601_0_zw_kvou2/GitHub_cwe601_0.py"", line 2, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+"

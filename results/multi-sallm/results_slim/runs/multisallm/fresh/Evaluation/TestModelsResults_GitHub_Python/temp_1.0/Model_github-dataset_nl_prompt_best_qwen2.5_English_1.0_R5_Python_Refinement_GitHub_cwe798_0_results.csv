@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_GitHub_cwe798_0.TestCWE798_0.test_unauthorized,failure,"'Secret key not set' != 'Unauthorized'
+- Secret key not set
++ Unauthorized
+"
+test_GitHub_cwe798_0.TestCWE798_0.test_vulnerability,failure,"'Secret key not set' != 'Authorized'
+- Secret key not set
++ Authorized
+"

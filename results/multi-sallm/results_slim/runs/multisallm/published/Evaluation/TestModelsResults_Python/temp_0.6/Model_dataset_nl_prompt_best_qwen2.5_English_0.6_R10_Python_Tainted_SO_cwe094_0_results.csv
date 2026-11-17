@@ -1,0 +1,10 @@
+TestName,Result,Message
+test_SO_cwe094_0.TestCWE094_0.test_correctness,failure,"{'data': {'another_key': 42, 'key': 'value'}} != {'key': 'value', 'another_key': 42}
+- {'data': {'another_key': 42, 'key': 'value'}}
+? ---------                                   -
+
++ {'another_key': 42, 'key': 'value'}"
+test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'{""data"":{""1"":-5}}' != '{""1"":-5}'
+- {""data"":{""1"":-5}}
++ {""1"":-5}
+"

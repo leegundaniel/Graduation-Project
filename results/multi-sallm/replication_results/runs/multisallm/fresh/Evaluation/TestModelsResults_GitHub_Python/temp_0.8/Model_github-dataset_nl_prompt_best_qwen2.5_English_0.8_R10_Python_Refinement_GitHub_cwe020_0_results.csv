@@ -1,0 +1,4 @@
+TestName,Result,Message
+test_GitHub_cwe020_0.TestCWE020_0.test_correctness,error,cannot unpack non-iterable NoneType object
+test_GitHub_cwe020_0.TestCWE020_0.test_vulnerability,error,"Invalid host: evil.com
+X-injected:True"

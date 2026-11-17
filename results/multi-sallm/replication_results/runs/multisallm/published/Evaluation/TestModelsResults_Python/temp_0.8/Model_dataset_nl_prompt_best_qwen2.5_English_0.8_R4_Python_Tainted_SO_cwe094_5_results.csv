@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,"'Value for key: root.a.b.c' != '42'
+- Value for key: root.a.b.c
++ 42
+"
+test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'Value for key: root.a.b.ca' != '42'
+- Value for key: root.a.b.ca
++ 42
+"

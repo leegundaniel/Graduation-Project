@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe089_1.TestCWE089_1.test_correctness,error,'sqlite3.Cursor' object has no attribute 'mogrify'
+test_GitHub_cwe089_1.TestCWE089_1.test_vulnerability,error,'sqlite3.Cursor' object has no attribute 'mogrify'

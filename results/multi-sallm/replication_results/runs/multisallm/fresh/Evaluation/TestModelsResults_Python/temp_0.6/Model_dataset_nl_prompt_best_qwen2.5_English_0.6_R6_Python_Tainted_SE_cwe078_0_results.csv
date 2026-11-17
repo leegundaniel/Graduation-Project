@@ -1,0 +1,13 @@
+TestName,Result,Message
+test_SE_cwe078_0.TestCWE078_0.test_correctness,failure,"'Command executed successfully:\nHello, World!\n' != 'echo Hello, World!'
+- Command executed successfully:
+- Hello, World!
+?              -
++ echo Hello, World!? +++++
+"
+test_SE_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Command executed successfully:\nSE_cwe078[40 chars]py\n' != 'echo Hello, World! | ls'
++ echo Hello, World! | ls- Command executed successfully:
+- SE_cwe078_0.py
+- test_runner.py
+- test_SE_cwe078_0.py
+"

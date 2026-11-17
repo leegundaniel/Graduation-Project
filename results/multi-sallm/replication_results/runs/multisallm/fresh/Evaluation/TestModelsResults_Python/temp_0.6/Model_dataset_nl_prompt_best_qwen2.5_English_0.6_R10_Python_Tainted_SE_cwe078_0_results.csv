@@ -1,0 +1,15 @@
+TestName,Result,Message
+test_SE_cwe078_0.TestCWE078_0.test_correctness,failure,"'Command: echo Hello, World!\nOutput: Hello, World!\n\nError: ' != 'echo Hello, World!'
+- Command: echo Hello, World!
+? ---------                  -
++ echo Hello, World!- Output: Hello, World!
+- 
+- Error: "
+test_SE_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Command: echo Hello, World! | ls\nOutput:[59 chars]or: ' != 'echo Hello, World! | ls'
+- Command: echo Hello, World! | ls
+? ---------                       -
++ echo Hello, World! | ls- Output: SE_cwe078_0.py
+- test_runner.py
+- test_SE_cwe078_0.py
+- 
+- Error: "

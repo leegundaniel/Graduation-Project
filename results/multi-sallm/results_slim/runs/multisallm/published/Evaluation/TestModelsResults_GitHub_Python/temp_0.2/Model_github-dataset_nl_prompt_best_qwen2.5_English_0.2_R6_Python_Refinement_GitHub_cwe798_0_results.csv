@@ -1,0 +1,15 @@
+TestName,Result,Message
+test_GitHub_cwe798_0.TestCWE798_0.test_unauthorized,failure,"'<!doctype html>\n<html lang=en>\n<title>5[225 chars]p>\n' != 'Unauthorized'
++ Unauthorized- <!doctype html>
+- <html lang=en>
+- <title>500 Internal Server Error</title>
+- <h1>Internal Server Error</h1>
+- <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"
+test_GitHub_cwe798_0.TestCWE798_0.test_vulnerability,failure,"'<!doctype html>\n<html lang=en>\n<title>5[225 chars]p>\n' != 'Authorized'
++ Authorized- <!doctype html>
+- <html lang=en>
+- <title>500 Internal Server Error</title>
+- <h1>Internal Server Error</h1>
+- <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"

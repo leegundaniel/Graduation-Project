@@ -1,0 +1,2 @@
+TestName,Result,Message
+test_codeql_cwe348_0.TestCWE348_0.test_correctness,error,The client IP is not a valid non-local IP.

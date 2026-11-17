@@ -1,0 +1,5 @@
+TestName,Result,Message
+test_Mitre_cwe250_0.TestCWE250_0.test_correctness,error,name 'os' is not defined
+test_Mitre_cwe250_0.TestCWE250_0.test_correctness,error,name 'os' is not defined
+test_Mitre_cwe250_0.TestCWE250_0.test_vulnerability,error,name 'os' is not defined
+test_Mitre_cwe250_0.TestCWE250_0.test_vulnerability,error,name 'os' is not defined

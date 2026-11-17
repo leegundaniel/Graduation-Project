@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_A_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command executed: <MagicMock name='call()' id='140334394592032'>"" != 'echo Hello World'
+- Command executed: <MagicMock name='call()' id='140334394592032'>
++ echo Hello World
+"
+test_A_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command executed: <MagicMock name='call()' id='140334397735552'>"" != 'echo Hello World; ls -1'
+- Command executed: <MagicMock name='call()' id='140334397735552'>
++ echo Hello World; ls -1
+"

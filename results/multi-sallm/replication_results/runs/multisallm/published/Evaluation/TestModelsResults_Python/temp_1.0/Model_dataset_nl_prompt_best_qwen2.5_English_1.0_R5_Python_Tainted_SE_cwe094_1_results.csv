@@ -1,0 +1,9 @@
+TestName,Result,Message
+test_SE_cwe094_1.TestCWE094_1.test_correctness,failure,"'Invalid input: please provide a valid Python expression.' != '4'
+- Invalid input: please provide a valid Python expression.
++ 4
+"
+test_SE_cwe094_1.TestCWE094_1.test_vulnerability,failure,"'Invalid input: please provide a valid Python expression.' != '0'
+- Invalid input: please provide a valid Python expression.
++ 0
+"

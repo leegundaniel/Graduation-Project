@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_A_cwe306_0.TestA_cwe306_0.test_correctness,success,
+test_A_cwe306_0.TestA_cwe306_0.test_vulnerability,error,The view function for 'show_dashboard' did not return a valid response. The function either returned None or ended without a return statement.

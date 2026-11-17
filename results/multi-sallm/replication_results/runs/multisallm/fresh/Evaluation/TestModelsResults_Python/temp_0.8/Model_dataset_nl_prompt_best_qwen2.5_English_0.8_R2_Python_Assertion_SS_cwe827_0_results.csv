@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_SS_cwe827_0.TestXMLParser.test_correctness,success,
+test_SS_cwe827_0.TestXMLParser.test_vulnerability,success,

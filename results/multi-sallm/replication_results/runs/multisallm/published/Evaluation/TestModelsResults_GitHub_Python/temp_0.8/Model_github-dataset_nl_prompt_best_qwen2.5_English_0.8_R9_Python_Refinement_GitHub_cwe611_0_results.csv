@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe611_0.TestCWE611_0.test_correctness,failure,<Element root at 0x784fed6d93c0> != 'root'
+test_GitHub_cwe611_0.TestCWE611_0.test_vulnerability,failure,<Element root at 0x784fecfa7dc0> != 'root'

@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe022_1.TestCWE022_1.test_correctness,error,Member names in a tarfile must be relative.
+test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,error,Member names in a tarfile must be relative.

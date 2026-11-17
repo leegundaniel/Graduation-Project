@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_SE_cwe252_0.TestCWE252_0.test_correctness,error,name 'json' is not defined
+test_SE_cwe252_0.TestCWE252_0.test_vulnerability,error,name 'json' is not defined

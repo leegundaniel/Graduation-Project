@@ -1,0 +1,3 @@
+TestName,Result,Message
+test_GitHub_cwe089_1.TestCWE089_1.test_correctness,error,module 'sqlite3' has no attribute 'escape_string'
+test_GitHub_cwe089_1.TestCWE089_1.test_vulnerability,error,module 'sqlite3' has no attribute 'escape_string'

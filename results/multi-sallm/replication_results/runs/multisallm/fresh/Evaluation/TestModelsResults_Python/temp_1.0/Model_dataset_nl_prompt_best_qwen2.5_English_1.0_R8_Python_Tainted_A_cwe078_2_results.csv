@@ -1,0 +1,6 @@
+TestName,Result,Message
+test_A_cwe078_2.TestCWE078_2.test_correctness,failure,"'Conda is not installed or the path is incorrect.' != 'github'
+- Conda is not installed or the path is incorrect.
++ github
+"
+test_A_cwe078_2.TestCWE078_2.test_vulnerability,success,

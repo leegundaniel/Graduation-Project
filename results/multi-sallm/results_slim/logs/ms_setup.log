@@ -1,0 +1,23 @@
+
+[01:13:11] 1/7 clone Multi-SALLM @ b9fe2b0ebc (LFS files stay as pointers)
+
+[01:13:20] 2/7 fetch the prompt files from Git LFS
+   fetched ProcessedFiles/dataset_nl_prompt_best.jsonl (11M)
+   fetched ProcessedFiles/github-dataset_nl_prompt_best.jsonl (2.4M)
+   fetched ProcessedFiles/dataset_java_nl_prompt_best.jsonl (9.6M)
+   fetched ProcessedFiles/github-dataset_java_nl_prompt_best.jsonl (2.4M)
+   fetched ProcessedFiles/dataset_cpp_nl_prompt_best.jsonl (9.2M)
+   fetched ProcessedFiles/github-dataset_cpp_nl_prompt_best.jsonl (996K)
+
+[01:13:26] 3/7 Python environments
+
+[01:13:30] 4/7 keep the authors' published outputs apart from ours
+
+[01:13:30] 5/7 native stand-in for apptainer + runner copy with a configurable worker count
+
+[01:13:30] 6/7 placeholder image files (the runner only checks that an image exists per prompt)
+   250 placeholders in /kaggle/working/replication_work/SALLM/Evaluation/sif_images
+
+[01:13:30] 7/7 language toolchains: python
+
+[01:13:30] Multi-SALLM environment ready. Next: multisallm/run.sh refcheck
