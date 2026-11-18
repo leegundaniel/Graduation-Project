@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SO_cwe078_1.TestCWE078_1.test_correctness,failure,"'{""message"":""github installed successfully""}\n' != 'github'
-- {""message"":""github installed successfully""}
-+ github"
-test_SO_cwe078_1.TestCWE078_1.test_vulnerability,failure,"'{""message"":""github|ls installed successfully""}\n' != 'github|ls'
-- {""message"":""github|ls installed successfully""}
-+ github|ls"

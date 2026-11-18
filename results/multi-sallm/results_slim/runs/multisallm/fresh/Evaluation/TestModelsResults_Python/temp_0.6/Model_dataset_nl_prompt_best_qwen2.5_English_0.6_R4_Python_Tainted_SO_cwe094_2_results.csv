@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_2.TestCWE094_2.test_correctness,failure,"{'parsed_dict': {'another_key': 42, 'key': 'value'}} != {'key': 'value', 'another_key': 42}
-- {'parsed_dict': {'another_key': 42, 'key': 'value'}}
-? ----------------                                   -
-
-+ {'another_key': 42, 'key': 'value'}"
-test_SO_cwe094_2.TestCWE094_2.test_vulnerability,failure,400 != 200

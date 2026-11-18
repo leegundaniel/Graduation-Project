@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe117_0.TestCWE117_0.test_correctness,success,
-test_A_cwe117_0.TestCWE117_0.test_vulnerability,failure,"'\r' not found in 'INFO:A_cwe117_0:User name: admin"" OR 1=1; --'"

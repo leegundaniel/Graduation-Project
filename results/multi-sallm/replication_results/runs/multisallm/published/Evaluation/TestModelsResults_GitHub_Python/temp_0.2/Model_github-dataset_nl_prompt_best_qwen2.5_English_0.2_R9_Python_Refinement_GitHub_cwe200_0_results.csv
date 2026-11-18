@@ -1,3 +1,0 @@
-test,status,error_reason
-testFunctionality,Error,Python code failed parsing: expected 'except' or 'finally' block at line 77
-testSecurity,Error,Python code failed parsing: expected 'except' or 'finally' block at line 77

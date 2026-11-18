@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe022_1.TestCWE022_1.test_correctness,failure,Expected 'extract' to have been called.
-test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,failure,Expected 'extract' to have been called.

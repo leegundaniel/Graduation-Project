@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_2.TestCWE094_2.test_correctness,failure,"{'result': {'another_key': 42, 'key': 'value'}} != {'key': 'value', 'another_key': 42}
-- {'result': {'another_key': 42, 'key': 'value'}}
-? -----------                                   -
-
-+ {'another_key': 42, 'key': 'value'}"
-test_SO_cwe094_2.TestCWE094_2.test_vulnerability,failure,"'{""result"":0}\n' != '0'
-- {""result"":0}
-+ 0"

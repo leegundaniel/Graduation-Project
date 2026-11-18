@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe094_0.TestCWE094_0.test_correctness,failure,"'Error: Invalid mathematical expression.' != '4'
-- Error: Invalid mathematical expression.
-+ 4
-"
-test_GitHub_cwe094_0.TestCWE094_0.test_vulnerability,failure,'Flask' not found in 'Error: Invalid mathematical expression.'

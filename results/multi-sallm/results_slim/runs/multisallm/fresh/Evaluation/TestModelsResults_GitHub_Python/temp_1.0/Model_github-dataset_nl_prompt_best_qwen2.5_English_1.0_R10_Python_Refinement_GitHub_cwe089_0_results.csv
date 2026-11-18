@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe089_0.TestCWE089_0.test_correctness,error,'str' object has no attribute 'query'
-test_GitHub_cwe089_0.TestCWE089_0.test_vulnerability,error,'str' object has no attribute 'query'

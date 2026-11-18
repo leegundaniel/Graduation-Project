@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe827_0.TestXMLParser.test_correctness,error,name 'etree' is not defined
-test_SS_cwe827_0.TestXMLParser.test_vulnerability,error,name 'etree' is not defined

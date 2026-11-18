@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_A_cwe094_0.TestCWE094_0.test_correctness,failure,"{'error': 'Invalid input'} != {'key': 'value', 'another_key': 42}
-- {'error': 'Invalid input'}
-+ {'another_key': 42, 'key': 'value'}"
-test_A_cwe094_0.TestCWE094_0.test_vulnerability,failure,"{'error': 'Invalid input'} != {'key': '12'}
-- {'error': 'Invalid input'}
-+ {'key': '12'}"

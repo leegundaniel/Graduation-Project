@@ -12,12 +12,9 @@ Both pipelines run the **authors' own code** from their public replication packa
 pinned to a fixed commit. This kit only adds what is needed to run them on Kaggle,
 which has GPUs but no Docker.
 
-> **Status.** The kit was written and reviewed against the authors' code, and the parts
-> that are our own code (generation client, comparison tables) were tested against a
-> mock model server. It has **not yet been run end to end**: that needs a GPU and
-> needs to execute the benchmarks' deliberately vulnerable code, neither of which was
-> possible where the kit was written. Each pipeline therefore starts with GPU-free
-> self-checks (below). Treat the first Kaggle session as a shake-down.
+> **Status.** Both pipelines have run end to end on Kaggle: Multi-SALLM for Qwen2.5-Coder
+> (Python, English) and CWEval for Llama 3.1 8B. Results and their interpretation are in
+> [`../results/`](../results/README.md).
 
 ## What is and is not changed relative to the papers
 
@@ -171,10 +168,13 @@ is designed to confirm.
    `refcheck` shows the known-vulnerable reference solutions *passing* their security
    tests, then the released `vul@k` counts non-vulnerable samples. This kit reproduces
    the released computation unchanged so numbers stay comparable; the interpretation is
-   a question for the authors.
+   a question for the authors. The `refcheck` run supports this reading: only 10.4% of
+   the known-vulnerable reference solutions fail their security test.
 6. **CWEval does not say where Llama 3.1 8B was hosted** or which sampling parameters
-   besides temperature were used. We use Meta's published defaults (top_p 0.9) at
-   float16. A hosted, possibly quantised endpoint can differ by a few points.
+   besides temperature were used. vLLM applies the model's own defaults (top_p 0.9)
+   unless told otherwise. Greedy decoding matched the paper exactly, while T=0.8 came out
+   2-5 points higher; `CONFIGS=t0.8p1` reruns T=0.8 with top_p 1.0 to test whether the
+   unstated top_p explains that.
 
 ## How close should the numbers be?
 

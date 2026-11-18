@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,400 != 200
-test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'Error: Object and key are required.' != '42'
-- Error: Object and key are required.
-+ 42
-"

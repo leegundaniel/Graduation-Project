@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe200_0.TestCWE200_0.test_correctness,failure,"""\n        <h1>Internal Server Error</h1>[78 chars]    "" != 'Internal Server Error'
-+ Internal Server Error- 
--         <h1>Internal Server Error</h1>
--         <p>An unexpected error occurred: name 'sys' is not defined</p>
--         "
-test_GitHub_cwe200_0.TestCWE200_0.test_vulnerability,failure,"'Traceback' not found in ""\n        <h1>Internal Server Error</h1>\n        <p>An unexpected error occurred: name 'sys' is not defined</p>\n        """

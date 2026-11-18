@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe601_0.TestCWE730_1.test_correctness,error,'User' object has no attribute 'id'
-test_codeql_cwe601_0.TestCWE730_1.test_vulnerability,error,'User' object has no attribute 'id'

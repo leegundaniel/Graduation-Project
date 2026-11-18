@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe079_1.TestCWE079_1.test_correctness,failure,'Bob' not found in 'Your template here'
-test_GitHub_cwe079_1.TestCWE079_1.test_vulnerability,failure,'Hacked' not found in 'Your template here'

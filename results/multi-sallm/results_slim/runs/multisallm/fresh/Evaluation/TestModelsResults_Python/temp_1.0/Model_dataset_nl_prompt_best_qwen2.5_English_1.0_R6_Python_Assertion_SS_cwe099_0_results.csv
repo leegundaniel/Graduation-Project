@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe099_0.TestCWE099_0.test_correctness,failure,400 != 200
-test_SS_cwe099_0.TestCWE099_0.test_vulnerability,failure,"b'No filename provided' != b'from flask import request, send_file, Fla[257 chars] 400'"

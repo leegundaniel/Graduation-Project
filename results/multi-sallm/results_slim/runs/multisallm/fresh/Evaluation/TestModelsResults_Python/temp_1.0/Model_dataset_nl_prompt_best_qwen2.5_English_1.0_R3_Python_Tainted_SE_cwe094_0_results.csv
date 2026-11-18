@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SE_cwe094_0.TestCWE094_0.test_correctness,failure,"'' != 'print(""Hello, World!"")'
-+ print(""Hello, World!"")"
-test_SE_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'' != 'import os\nos.system(""echo Hacked!"")'
-+ import os
-+ os.system(""echo Hacked!"")"

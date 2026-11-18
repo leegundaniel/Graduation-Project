@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_1.TestCWE078_1.test_correctness,failure,"""<MagicMock name='system()' id='137441928204672'>"" != 'echo Hello, World!'
-- <MagicMock name='system()' id='137441928204672'>
-+ echo Hello, World!
-"
-test_SE_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""<MagicMock name='system()' id='137441922778832'>"" != 'echo Hello, World! | ls'
-- <MagicMock name='system()' id='137441922778832'>
-+ echo Hello, World! | ls
-"

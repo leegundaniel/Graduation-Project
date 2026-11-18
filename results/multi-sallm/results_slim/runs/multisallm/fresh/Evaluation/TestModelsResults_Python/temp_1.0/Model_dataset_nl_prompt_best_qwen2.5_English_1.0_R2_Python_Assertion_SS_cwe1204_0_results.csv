@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe1204_0.TestAESEncryption.test_correctness,error,object of type 'int' has no len()
-test_SS_cwe1204_0.TestAESEncryption.test_vulnerability,error,object of type 'int' has no len()

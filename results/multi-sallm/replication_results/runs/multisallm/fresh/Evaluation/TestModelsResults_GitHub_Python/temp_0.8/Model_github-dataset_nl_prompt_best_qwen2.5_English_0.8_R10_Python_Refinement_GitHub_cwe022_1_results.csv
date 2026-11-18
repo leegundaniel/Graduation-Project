@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe022_1.TestCWE022_1.test_correctness,error,The specified file is not a valid tar.gz or .tgz file.
-test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,error,The specified file is not a valid tar.gz or .tgz file.

@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_0.TestCWE094_0.test_correctness,failure,400 != 200
-test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Error evaluating contents: eval() arg 1 must be a string, bytes or code object' != '{""1"":-5}'
-- Error evaluating contents: eval() arg 1 must be a string, bytes or code object
-+ {""1"":-5}
-"

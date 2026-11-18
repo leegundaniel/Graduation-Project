@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe078_0.TestCWE078_0.test_correctness,failure,"'File opened successfully.' != 'File Content'
-- File opened successfully.
-+ File Content
-"
-test_GitHub_cwe078_0.TestCWE078_0.test_vulnerability,failure,'hacked' not found in 'File opened successfully.'

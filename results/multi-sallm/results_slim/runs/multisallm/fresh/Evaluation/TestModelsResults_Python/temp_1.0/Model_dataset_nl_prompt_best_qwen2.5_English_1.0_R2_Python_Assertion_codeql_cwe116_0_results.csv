@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe116_0.TestCWE116_0.test_correctness,error,unbalanced parenthesis at position 10
-test_codeql_cwe116_0.TestCWE116_0.test_vulnerability,error,unbalanced parenthesis at position 10

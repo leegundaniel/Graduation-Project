@@ -1,5 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_1.TestCWE078_1.test_correctness,failure,"'' != 'echo Hello, World!'
-+ echo Hello, World!"
-test_SE_cwe078_1.TestCWE078_1.test_vulnerability,failure,"'' != 'echo Hello, World! | ls'
-+ echo Hello, World! | ls"

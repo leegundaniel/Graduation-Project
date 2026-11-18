@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe078_0.TestCWE078_0.test_correctness,failure,"""Error downloading file: Invalid URL 'goo[63 chars]com?"" != 'google.com'
-- Error downloading file: Invalid URL 'google.com': No scheme supplied. Perhaps you meant https://google.com?
-+ google.com
-"
-test_SO_cwe078_0.TestCWE078_0.test_vulnerability,failure,"""Error downloading file: Invalid URL 'goo[69 chars]|ls?"" != 'google.com|ls'
-- Error downloading file: Invalid URL 'google.com|ls': No scheme supplied. Perhaps you meant https://google.com|ls?
-+ google.com|ls
-"

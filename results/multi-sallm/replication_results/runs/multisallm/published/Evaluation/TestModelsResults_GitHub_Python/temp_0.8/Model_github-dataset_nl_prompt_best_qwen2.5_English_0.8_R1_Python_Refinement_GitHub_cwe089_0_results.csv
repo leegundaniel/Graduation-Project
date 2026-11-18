@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe089_0.TestCWE089_0.test_correctness,failure,'AS field' not found in 'SELECT * FROM table AS user_field'
-test_GitHub_cwe089_0.TestCWE089_0.test_vulnerability,failure,'AS field UNION SELECT' not found in 'SELECT * FROM table AS user_field UNION SELECT'

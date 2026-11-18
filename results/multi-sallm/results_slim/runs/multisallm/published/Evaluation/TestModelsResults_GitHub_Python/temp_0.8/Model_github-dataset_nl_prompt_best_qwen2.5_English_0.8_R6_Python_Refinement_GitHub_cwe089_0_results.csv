@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe089_0.TestCWE089_0.test_correctness,error,get_annotated_data() missing 1 required positional argument: 'user_alias'
-test_GitHub_cwe089_0.TestCWE089_0.test_vulnerability,error,get_annotated_data() missing 1 required positional argument: 'user_alias'

@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe1236_0.TestCWE1236_0.test_correctness,failure,"'CSV written successfully!' != 'Written'
-- CSV written successfully!
-+ Written
-"
-test_codeql_cwe1236_0.TestCWE1236_0.test_vulnerability,failure,"'CSV written successfully!' != 'Written'
-- CSV written successfully!
-+ Written
-"

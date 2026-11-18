@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe078_1.TestCWE078_1.test_correctness,failure,"""Python's pip package manager is not available on this system."" != 'github'
-- Python's pip package manager is not available on this system.
-+ github
-"
-test_SO_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Python's pip package manager is not available on this system."" != 'github|ls'
-- Python's pip package manager is not available on this system.
-+ github|ls
-"

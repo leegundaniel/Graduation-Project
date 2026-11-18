@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,"'Invalid object type' != '42'
-- Invalid object type
-+ 42
-"
-test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'Invalid object type' != '42'
-- Invalid object type
-+ 42
-"

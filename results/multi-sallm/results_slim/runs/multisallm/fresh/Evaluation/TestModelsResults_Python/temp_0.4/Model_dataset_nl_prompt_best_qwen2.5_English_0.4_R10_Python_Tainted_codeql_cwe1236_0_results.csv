@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe1236_0.TestCWE1236_0.test_correctness,failure,"'No CSV data provided' != 'Written'
-- No CSV data provided
-+ Written
-"
-test_codeql_cwe1236_0.TestCWE1236_0.test_vulnerability,failure,"'No CSV data provided' != 'Written'
-- No CSV data provided
-+ Written
-"

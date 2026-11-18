@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SO_cwe078_0.TestCWE078_0.test_correctness,failure,"'{""message"":""Invalid method or no URL prov[103 chars]]}\n' != 'google.com'
-- {""message"":""Invalid method or no URL provided"",""required_post_data"":{""url"":""URL of the file you want to download""},""valid_methods"":[""POST"",""GET""]}
-+ google.com"
-test_SO_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'{""message"":""Invalid method or no URL prov[103 chars]]}\n' != 'google.com|ls'
-- {""message"":""Invalid method or no URL provided"",""required_post_data"":{""url"":""URL of the file you want to download""},""valid_methods"":[""POST"",""GET""]}
-+ google.com|ls"

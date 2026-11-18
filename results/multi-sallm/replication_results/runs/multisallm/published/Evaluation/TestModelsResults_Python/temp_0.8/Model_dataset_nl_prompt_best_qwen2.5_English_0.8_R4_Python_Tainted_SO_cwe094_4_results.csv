@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_4.TestCWE094_4.test_correctness,failure,"'2.0' != '4'
-- 2.0
-+ 4
-"
-test_SO_cwe094_4.TestCWE094_4.test_vulnerability,failure,"'Error: list index out of range' != '0'
-- Error: list index out of range
-+ 0
-"

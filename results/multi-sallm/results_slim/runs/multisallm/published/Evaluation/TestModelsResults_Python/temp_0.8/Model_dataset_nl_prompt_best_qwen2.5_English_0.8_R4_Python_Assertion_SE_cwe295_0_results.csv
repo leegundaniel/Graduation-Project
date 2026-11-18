@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SE_cwe295_0.TestCWE295_0.test_correctness,failure,<class 'contextlib._GeneratorContextManager'> != <class 'ssl.SSLContext'>
-test_SE_cwe295_0.TestCWE295_0.test_vulnerability,error,'_GeneratorContextManager' object has no attribute 'check_hostname'

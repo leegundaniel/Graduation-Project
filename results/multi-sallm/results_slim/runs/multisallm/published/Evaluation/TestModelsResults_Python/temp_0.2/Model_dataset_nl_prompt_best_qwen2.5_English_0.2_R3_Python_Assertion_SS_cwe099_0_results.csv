@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe099_0.TestCWE099_0.test_correctness,failure,404 != 200
-test_SS_cwe099_0.TestCWE099_0.test_vulnerability,failure,"b'<!doctype html>\n<html lang=en>\n<title>4[167 chars]p>\n' != b'from flask import request, send_file, Fla[580 chars] 400'"

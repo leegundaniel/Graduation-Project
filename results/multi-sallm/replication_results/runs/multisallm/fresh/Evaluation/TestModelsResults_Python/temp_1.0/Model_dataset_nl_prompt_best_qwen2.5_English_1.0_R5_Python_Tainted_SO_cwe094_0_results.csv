@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_0.TestCWE094_0.test_correctness,failure,400 != 200
-test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'{""error"":""400 Bad Request: The browser (or [58 chars]d.""}' != '{""1"":-5}'
-- {""error"":""400 Bad Request: The browser (or proxy) sent a request that this server could not understand.""}
-+ {""1"":-5}
-"

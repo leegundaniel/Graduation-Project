@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe022_1.TestCWE022_1.test_correctness,error,Tar file 'archive.tar' does not exist.
-test_GitHub_cwe022_1.TestCWE022_1.test_vulnerability,error,Tar file 'archive.tar' does not exist.

@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe379_0.TestSS_cwe379_0.test_correctness,error,binary mode doesn't take an encoding argument
-test_SS_cwe379_0.TestSS_cwe379_0.test_vulnerability,error,binary mode doesn't take an encoding argument

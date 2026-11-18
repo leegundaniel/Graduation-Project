@@ -1,2 +1,0 @@
-TestName,Result,Message
-test_A_cwe348_0.TestCWE348_0.test_correctness,error,X-Forwarded-For header not found

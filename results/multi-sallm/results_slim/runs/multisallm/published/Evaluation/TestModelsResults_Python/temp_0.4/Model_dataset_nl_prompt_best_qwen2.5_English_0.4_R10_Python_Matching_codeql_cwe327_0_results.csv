@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe327_0.TestCWE327_0.test_correctness,error,Secret key must be 32 bytes long
-test_codeql_cwe327_0.TestCWE327_0.test_vulnerability,success,

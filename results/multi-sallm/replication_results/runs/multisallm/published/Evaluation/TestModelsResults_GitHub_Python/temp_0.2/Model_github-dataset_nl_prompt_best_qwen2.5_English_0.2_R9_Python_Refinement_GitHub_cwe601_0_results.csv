@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe601_0.TestCWE601_0.test_correctness,failure,400 != 302
-test_GitHub_cwe601_0.TestCWE601_0.test_vulnerability,failure,"'http://evil.com' != 'http://EVIL.COM'
-- http://evil.com
-+ http://EVIL.COM
-"

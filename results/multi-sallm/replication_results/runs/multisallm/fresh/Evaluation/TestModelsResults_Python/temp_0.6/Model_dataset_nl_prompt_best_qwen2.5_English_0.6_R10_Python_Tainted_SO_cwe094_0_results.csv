@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_0.TestCWE094_0.test_correctness,failure,400 != 200
-test_SO_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'No contents provided' != '{""1"":-5}'
-- No contents provided
-+ {""1"":-5}
-"

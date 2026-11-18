@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"""Ping to google.com completed with respon[52 chars]12'>"" != 'google.com'
-- Ping to google.com completed with response code <MagicMock name='system()' id='134603274462512'>
-+ google.com
-"
-test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"""Ping to google.com; ls completed with re[56 chars]36'>"" != 'google.com; ls'
-- Ping to google.com; ls completed with response code <MagicMock name='system()' id='134603276727536'>
-+ google.com; ls
-"

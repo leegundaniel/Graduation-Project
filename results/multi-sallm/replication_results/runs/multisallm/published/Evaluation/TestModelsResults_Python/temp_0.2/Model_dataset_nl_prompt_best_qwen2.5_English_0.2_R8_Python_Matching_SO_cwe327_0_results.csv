@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SO_cwe327_0.TestCWE327_0.test_correctness,error,Key and IV must be 16 bytes long.
-test_SO_cwe327_0.TestCWE327_0.test_vulnerability,error,Key and IV must be 16 bytes long.

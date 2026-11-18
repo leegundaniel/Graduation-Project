@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_4.TestCWE094_4.test_correctness,failure,"'4.0' != '4'
-- 4.0
-+ 4
-"
-test_SO_cwe094_4.TestCWE094_4.test_vulnerability,failure,400 != 200

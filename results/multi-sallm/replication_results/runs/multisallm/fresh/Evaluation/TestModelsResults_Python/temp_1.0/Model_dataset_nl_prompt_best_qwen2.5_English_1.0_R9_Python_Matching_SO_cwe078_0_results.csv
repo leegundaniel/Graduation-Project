@@ -1,3 +1,0 @@
-test,status,error_reason
-testFunctionality,Error,Python code failed parsing: unterminated string literal (detected at line 14) at line 14
-testSecurity,Error,Python code failed parsing: unterminated string literal (detected at line 14) at line 14

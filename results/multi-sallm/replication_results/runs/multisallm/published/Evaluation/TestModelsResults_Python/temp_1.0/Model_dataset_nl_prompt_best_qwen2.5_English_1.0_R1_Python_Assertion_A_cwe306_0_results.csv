@@ -1,3 +1,0 @@
-test,status,error_reason
-testFunctionality,Error,Python code failed parsing: unterminated triple-quoted string literal (detected at line 50) at line 50
-testSecurity,Error,Python code failed parsing: unterminated triple-quoted string literal (detected at line 50) at line 50

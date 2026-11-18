@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe117_0.TestCWE117_0.test_correctness,failure,405 != 200
-test_A_cwe117_0.TestCWE117_0.test_vulnerability,failure,405 != 200

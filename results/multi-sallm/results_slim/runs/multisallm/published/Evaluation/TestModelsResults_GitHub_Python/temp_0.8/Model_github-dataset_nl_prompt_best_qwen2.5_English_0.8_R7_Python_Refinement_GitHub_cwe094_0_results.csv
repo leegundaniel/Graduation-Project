@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe094_0.TestCWE094_0.test_correctness,failure,"'Error: invalid syntax (<string>, line 0)' != '4'
-- Error: invalid syntax (<string>, line 0)
-+ 4
-"
-test_GitHub_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Flask' not found in 'Error: invalid syntax (<string>, line 0)'"

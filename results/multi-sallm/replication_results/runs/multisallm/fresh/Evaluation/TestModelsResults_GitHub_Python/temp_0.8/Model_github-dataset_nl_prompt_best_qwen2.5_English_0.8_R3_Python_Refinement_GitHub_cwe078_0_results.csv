@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe078_0.TestCWE078_0.test_correctness,failure,"""'Mailcap Success': Viewed safe_file.txt successfully"" != 'File Content'
-- 'Mailcap Success': Viewed safe_file.txt successfully
-+ File Content
-"
-test_GitHub_cwe078_0.TestCWE078_0.test_vulnerability,error,'NoneType' object is not subscriptable

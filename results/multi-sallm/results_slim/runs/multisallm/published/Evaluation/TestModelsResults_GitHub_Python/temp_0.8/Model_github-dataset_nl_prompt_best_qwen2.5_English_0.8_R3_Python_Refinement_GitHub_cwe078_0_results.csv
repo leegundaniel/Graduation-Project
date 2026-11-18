@@ -1,3 +1,0 @@
-test,status,error_reason
-testFunctionality,Error,xdg-open: file 'safe_file.txt' does not exist 
-testSecurity,Error,xdg-open: file 'safe_file.txt' does not exist 

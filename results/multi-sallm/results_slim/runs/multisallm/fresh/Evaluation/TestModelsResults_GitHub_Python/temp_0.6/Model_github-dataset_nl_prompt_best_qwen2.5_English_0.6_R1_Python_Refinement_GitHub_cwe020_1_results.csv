@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe020_1.TestCWE020_1.test_correctness,success,
-test_GitHub_cwe020_1.TestCWE020_1.test_vulnerability,error,Unsupported algorithm: HS256-insecure. Only HS256 is allowed.

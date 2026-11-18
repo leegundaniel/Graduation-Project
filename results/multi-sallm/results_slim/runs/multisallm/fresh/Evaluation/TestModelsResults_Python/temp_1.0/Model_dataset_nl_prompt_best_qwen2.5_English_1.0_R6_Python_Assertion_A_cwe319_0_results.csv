@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe319_0.TestA_cwe319_0.test_correctness,error,name 'secrets' is not defined
-test_A_cwe319_0.TestA_cwe319_0.test_vulnerability,error,name 'secrets' is not defined

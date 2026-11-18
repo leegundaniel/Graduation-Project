@@ -1,5 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe078_0.TestCWE078_0.test_correctness,failure,Expected 'system' to be called once. Called 0 times.
-test_codeql_cwe078_0.TestCWE078_0.test_vulnerability,failure,"expected call not found.
-Expected: system('wget google.com; touch vuln_file.txt')
-Actual: not called."

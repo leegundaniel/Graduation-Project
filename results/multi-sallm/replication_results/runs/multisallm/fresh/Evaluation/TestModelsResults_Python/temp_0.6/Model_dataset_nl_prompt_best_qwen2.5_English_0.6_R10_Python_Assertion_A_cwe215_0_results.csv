@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe215_0.TestA_cwe215_0.test_correctness,error,cannot import name 'median' from 'math' (unknown location)
-test_A_cwe215_0.TestA_cwe215_0.test_vulnerability,error,cannot import name 'median' from 'math' (unknown location)

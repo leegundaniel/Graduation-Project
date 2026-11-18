@@ -1,3 +1,0 @@
-test,status,error_reason
-testFunctionality,Error, * Serving Flask app 'GitHub_cwe200_1'  * Debug mode: off Address already in use Port 5000 is in use by another program. Either identify and stop that program; or start the server with a different port. 
-testSecurity,Error, * Serving Flask app 'GitHub_cwe200_1'  * Debug mode: off Address already in use Port 5000 is in use by another program. Either identify and stop that program; or start the server with a different port. 

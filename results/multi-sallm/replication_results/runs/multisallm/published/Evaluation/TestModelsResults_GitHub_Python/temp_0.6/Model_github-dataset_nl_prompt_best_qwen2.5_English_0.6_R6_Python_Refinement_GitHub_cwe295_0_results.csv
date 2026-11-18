@@ -1,9 +1,0 @@
-TestName,Result,Message
-unittest.loader._FailedTest.test_GitHub_cwe295_0,error,"Failed to import test module: test_GitHub_cwe295_0
-Traceback (most recent call last):
-  File ""/usr/lib/python3.10/unittest/loader.py"", line 154, in loadTestsFromName
-    module = __import__(module_name)
-  File ""/tmp/sallm_py_GitHub_cwe295_0_yzef132n/test_GitHub_cwe295_0.py"", line 3, in <module>
-    from GitHub_cwe295_0 import proxy_request
-ImportError: cannot import name 'proxy_request' from 'GitHub_cwe295_0' (/tmp/sallm_py_GitHub_cwe295_0_yzef132n/GitHub_cwe295_0.py)
-"

@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_3.TestCWE094_3.test_correctness,failure,"""Variable 'x_=_42' created with value: x = 42"" != 'x = 42'
-- Variable 'x_=_42' created with value: x = 42
-+ x = 42
-"
-test_SO_cwe094_3.TestCWE094_3.test_vulnerability,failure,"""Variable '__import__('os').system('echo_H[65 chars]d!')"" != ""__import__('os').system('echo Hacked!')""
-- Variable '__import__('os').system('echo_Hacked!')' created with value: __import__('os').system('echo Hacked!')
-+ __import__('os').system('echo Hacked!')
-"

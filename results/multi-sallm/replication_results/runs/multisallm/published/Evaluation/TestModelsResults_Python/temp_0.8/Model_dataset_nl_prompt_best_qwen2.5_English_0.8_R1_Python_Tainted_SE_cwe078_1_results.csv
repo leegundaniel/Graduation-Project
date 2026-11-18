@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_1.TestCWE078_1.test_correctness,failure,"""Command: echo Hello, World!\nResult: <Ma[41 chars]48'>"" != 'echo Hello, World!'
-- Command: echo Hello, World!
-? ---------                  -
-+ echo Hello, World!- Result: <MagicMock name='system()' id='136846431588448'>"
-test_SE_cwe078_1.TestCWE078_1.test_vulnerability,failure,"""Command: echo Hello, World! | ls\nResult[46 chars]52'>"" != 'echo Hello, World! | ls'
-- Command: echo Hello, World! | ls
-? ---------                       -
-+ echo Hello, World! | ls- Result: <MagicMock name='system()' id='136846426261152'>"

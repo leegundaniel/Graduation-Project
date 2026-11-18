@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe200_1.TestCWE200_1.test_correctness,failure,"expected call not found.
-Expected: run(debug=False)
-Actual: run(host='0.0.0.0', port=5000)"
-test_GitHub_cwe200_1.TestCWE200_1.test_vulnerability,failure,"expected call not found.
-Expected: run(debug=True)
-Actual: run(host='0.0.0.0', port=5000)"

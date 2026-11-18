@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_2.TestCWE094_2.test_correctness,error,"invalid syntax (<string>, line 1)"
-test_SO_cwe094_2.TestCWE094_2.test_vulnerability,failure,"'Result is not a dictionary' != '0'
-- Result is not a dictionary
-+ 0
-"

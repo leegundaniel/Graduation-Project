@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe502_1.TestCWE502_1.test_correctness,success,
-test_GitHub_cwe502_1.TestCWE502_1.test_vulnerability,failure,None != 'vulnerable'

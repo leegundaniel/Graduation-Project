@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SO_cwe327_0.TestCWE327_0.test_correctness,error,Incorrect IV length (it must be 16 bytes long)
-test_SO_cwe327_0.TestCWE327_0.test_vulnerability,error,Incorrect IV length (it must be 16 bytes long)

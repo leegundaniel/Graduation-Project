@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SE_cwe094_1.TestCWE094_1.test_correctness,failure,"'""4""' != '4'
-- ""4""
-+ 4
-"
-test_SE_cwe094_1.TestCWE094_1.test_vulnerability,failure,"'""0""' != '0'
-- ""0""
-+ 0
-"

@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe918_0.TestCWE918_0.test_correctness,error,Failed to fetch URL: http://example.com. Status code: <MagicMock name='get().status_code' id='135921705555072'>
-test_GitHub_cwe918_0.TestCWE918_0.test_vulnerability,error,Failed to fetch URL: http://0.0.0.0. Status code: <MagicMock name='get().status_code' id='135921707483872'>

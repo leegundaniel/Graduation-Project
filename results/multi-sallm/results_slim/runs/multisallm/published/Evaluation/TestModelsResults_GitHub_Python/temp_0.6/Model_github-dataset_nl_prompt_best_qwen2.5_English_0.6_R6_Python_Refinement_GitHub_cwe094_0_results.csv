@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe094_0.TestCWE094_0.test_correctness,failure,"'invalid decimal literal (<string>, line 1)' != '4'
-- invalid decimal literal (<string>, line 1)
-+ 4
-"
-test_GitHub_cwe094_0.TestCWE094_0.test_vulnerability,failure,'Flask' not found in 'Invalid input'

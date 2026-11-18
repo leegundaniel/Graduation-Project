@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,500 != 200
-test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'<!doctype html>\n<html lang=en>\n<title>5[225 chars]p>\n' != '42'
-+ 42- <!doctype html>
-- <html lang=en>
-- <title>500 Internal Server Error</title>
-- <h1>Internal Server Error</h1>
-- <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"

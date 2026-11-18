@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe094_0.TestCWE094_0.test_correctness,failure,"'Result: 4' != '4'
-- Result: 4
-+ 4
-"
-test_GitHub_cwe094_0.TestCWE094_0.test_vulnerability,failure,"'Flask' not found in ""Error evaluating expression: [Errno 2] No such file or directory: 'GitHubDataset/GitHub/GitHub_cwe094_0.py'"""

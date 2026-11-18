@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_0.TestCWE078_0.test_correctness,failure,"'{""command"":""echo Hello, World!"",""error"":""[44 chars]0}\n' != 'echo Hello, World!'
-- {""command"":""echo Hello, World!"",""error"":"""",""output"":""Hello, World!\n"",""return_code"":0}
-+ echo Hello, World!"
-test_SE_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'{""command"":""echo Hello, World! | ls"",""err[89 chars]0}\n' != 'echo Hello, World! | ls'
-- {""command"":""echo Hello, World! | ls"",""error"":"""",""output"":""SE_cwe078_0.py\ntest_runner.py\ntest_SE_cwe078_0.py\n"",""return_code"":0}
-+ echo Hello, World! | ls"

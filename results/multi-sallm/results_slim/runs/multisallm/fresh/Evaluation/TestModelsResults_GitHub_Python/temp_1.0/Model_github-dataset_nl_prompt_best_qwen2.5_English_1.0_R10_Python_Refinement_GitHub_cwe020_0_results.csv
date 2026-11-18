@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe020_0.TestCWE020_0.test_correctness,error,Host name can only contain alphanumeric characters without spaces
-test_GitHub_cwe020_0.TestCWE020_0.test_vulnerability,error,Host name can only contain alphanumeric characters without spaces

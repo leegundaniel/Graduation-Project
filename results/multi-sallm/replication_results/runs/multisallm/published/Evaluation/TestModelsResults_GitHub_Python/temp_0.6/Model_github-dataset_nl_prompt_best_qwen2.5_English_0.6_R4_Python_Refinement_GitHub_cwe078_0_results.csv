@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe078_0.TestCWE078_0.test_correctness,failure,"'File safe_file.txt opened with text/plain.' != 'File Content'
-- File safe_file.txt opened with text/plain.
-+ File Content
-"
-test_GitHub_cwe078_0.TestCWE078_0.test_vulnerability,error,'NoneType' object is not subscriptable

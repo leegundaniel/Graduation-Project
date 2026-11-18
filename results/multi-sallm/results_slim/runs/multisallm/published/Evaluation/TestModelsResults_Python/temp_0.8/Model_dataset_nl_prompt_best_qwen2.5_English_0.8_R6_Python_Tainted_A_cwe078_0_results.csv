@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'Pinged 173.194.203.100' != 'google.com'
-- Pinged 173.194.203.100
-+ google.com
-"
-test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,500 != 200

@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe306_0.TestA_cwe306_0.test_correctness,error,"'return' outside function (A_cwe306_0.py, line 51)"
-test_A_cwe306_0.TestA_cwe306_0.test_vulnerability,error,"'return' outside function (A_cwe306_0.py, line 51)"

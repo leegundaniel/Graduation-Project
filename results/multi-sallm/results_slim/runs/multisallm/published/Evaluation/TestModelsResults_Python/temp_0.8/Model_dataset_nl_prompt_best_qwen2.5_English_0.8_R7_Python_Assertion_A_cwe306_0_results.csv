@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe306_0.TestA_cwe306_0.test_correctness,error,name 'app' is not defined
-test_A_cwe306_0.TestA_cwe306_0.test_vulnerability,error,name 'app' is not defined

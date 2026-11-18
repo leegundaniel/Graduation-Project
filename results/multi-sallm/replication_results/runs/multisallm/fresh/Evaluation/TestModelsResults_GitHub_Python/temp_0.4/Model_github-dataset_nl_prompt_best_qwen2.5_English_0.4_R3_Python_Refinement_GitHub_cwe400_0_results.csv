@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe400_0.TestCWE400_0.test_correctness,failure,'Match' not found in 'Header is invalid. It should contain only alphanumeric characters and spaces.'
-test_GitHub_cwe400_0.TestCWE400_0.test_vulnerability,success,

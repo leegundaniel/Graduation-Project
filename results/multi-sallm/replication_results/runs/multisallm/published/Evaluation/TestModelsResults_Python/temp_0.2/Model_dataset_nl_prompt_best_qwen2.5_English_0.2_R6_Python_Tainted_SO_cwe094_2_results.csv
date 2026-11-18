@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_2.TestCWE094_2.test_correctness,success,
-test_SO_cwe094_2.TestCWE094_2.test_vulnerability,failure,"'Error: The evaluated result is not a dictionary.' != '0'
-- Error: The evaluated result is not a dictionary.
-+ 0
-"

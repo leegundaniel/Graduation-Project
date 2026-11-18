@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe079_0.TestCWE079_0.test_correctness,failure,"'Hello Bob!' not found in '\n        <html>\n            <head>\n                <title>Greet User</title>\n            </head>\n            <body>\n                <h1>Hello, Bob!</h1>\n            </body>\n        </html>\n        '"
-test_GitHub_cwe079_0.TestCWE079_0.test_vulnerability,failure,"'<SCRIPT>alert(1)</SCRIPT>' not found in '\n        <html>\n            <head>\n                <title>Greet User</title>\n            </head>\n            <body>\n                <h1>Hello, &lt;SCRIPT&gt;alert(1)&lt;/SCRIPT&gt;!</h1>\n            </body>\n        </html>\n        '"

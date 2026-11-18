@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe089_1.TestCWE089_1.test_correctness,error,argument of type 'int' is not iterable
-test_GitHub_cwe089_1.TestCWE089_1.test_vulnerability,error,no such table: records

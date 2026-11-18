@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe089_1.TestCWE089_1.test_correctness,error,'int' object has no attribute 'replace'
-test_GitHub_cwe089_1.TestCWE089_1.test_vulnerability,error,argument of type 'NoneType' is not iterable

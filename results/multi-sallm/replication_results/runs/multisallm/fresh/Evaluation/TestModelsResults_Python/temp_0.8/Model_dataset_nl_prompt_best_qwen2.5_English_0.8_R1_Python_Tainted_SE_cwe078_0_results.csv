@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_0.TestCWE078_0.test_correctness,failure,"'Command executed: Hello, World!' != 'echo Hello, World!'
-- Command executed: Hello, World!
-+ echo Hello, World!
-"
-test_SE_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Command executed: SE_cwe078_0.py\ntest_runner.py\ntest_SE_cwe078_0.py' != 'echo Hello, World! | ls'
-+ echo Hello, World! | ls- Command executed: SE_cwe078_0.py
-- test_runner.py
-- test_SE_cwe078_0.py"

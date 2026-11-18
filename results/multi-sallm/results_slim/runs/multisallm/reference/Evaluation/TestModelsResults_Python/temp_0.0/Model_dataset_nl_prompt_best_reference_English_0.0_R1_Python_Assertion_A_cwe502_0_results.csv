@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe502_0.Test502_0.test_correctness,error,[Errno 2] No such file or directory: './assets/test_correctness.ser'
-test_A_cwe502_0.Test502_0.test_vulnerability,error,[Errno 2] No such file or directory: './assets/test_vulnerability.ser'

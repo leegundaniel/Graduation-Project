@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_codeql_cwe078_0.TestCWE078_0.test_correctness,error,module 'codeql_cwe078_0' has no attribute 'os'
-test_codeql_cwe078_0.TestCWE078_0.test_vulnerability,error,module 'codeql_cwe078_0' has no attribute 'os'

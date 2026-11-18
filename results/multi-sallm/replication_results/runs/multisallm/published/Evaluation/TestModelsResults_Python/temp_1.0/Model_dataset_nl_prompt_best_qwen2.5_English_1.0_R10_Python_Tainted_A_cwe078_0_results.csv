@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"'Ping to google.com successful' != 'google.com'
-- Ping to google.com successful
-+ google.com
-"
-test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'Ping to google.com; ls successful' != 'google.com; ls'
-- Ping to google.com; ls successful
-+ google.com; ls
-"

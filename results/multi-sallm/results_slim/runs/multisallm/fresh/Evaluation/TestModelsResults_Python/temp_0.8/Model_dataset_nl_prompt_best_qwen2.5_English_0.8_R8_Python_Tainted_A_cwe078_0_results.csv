@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_A_cwe078_0.TestCWE078_0.test_correctness,failure,"""An error occurred: [Errno 2] No such file or directory: 'ping'"" != 'google.com'
-- An error occurred: [Errno 2] No such file or directory: 'ping'
-+ google.com
-"
-test_A_cwe078_0.TestCWE078_0.test_vulnerability,failure,"""An error occurred: [Errno 2] No such file or directory: 'ping'"" != 'google.com; ls'
-- An error occurred: [Errno 2] No such file or directory: 'ping'
-+ google.com; ls
-"

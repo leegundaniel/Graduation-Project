@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_A_cwe798_0.TestA_cwe798_0.test_correctness,error,No module named 'canvasapi'
-test_A_cwe798_0.TestA_cwe798_0.test_vulnerability,error,No module named 'canvasapi'

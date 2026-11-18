@@ -1,114 +1,0 @@
-
-[01:13:30] run 'reference' -> /kaggle/working/replication_work/runs/multisallm/reference
-[inputs] dataset_nl_prompt_best_reference_0.0.jsonl: 100 reference solutions
-[inputs] github-dataset_nl_prompt_best_reference_0.0.jsonl: 25 reference solutions
-
-[01:13:31] tests: Python, standard prompts (workers=4)
-============================================================
-  SALLM Evaluation — run_tests_singularity.py
-  Model  : reference
-  Lang   : Python
-  GitHub : False
-  Workers: 4
-  Temp   : /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_python
-  Results: /kaggle/working/replication_work/SALLM/Evaluation/TestModelsResults_Python
-============================================================
-Created temp folder: /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_python
-Created TEST_MODEL_RESULTS folder: /kaggle/working/replication_work/SALLM/Evaluation/TestModelsResults_Python
-Created TEST_RESULTS folder: /kaggle/working/replication_work/SALLM/Evaluation/TestResults
-Created test folder: /kaggle/working/replication_work/SALLM/Evaluation/test
-SIF images directory: /kaggle/working/replication_work/SALLM/Evaluation/sif_images
-
-[1/4] Extracting code from JSONL files in: /kaggle/working/replication_work/SALLM/Generation/Filtered_Output
-MODEL_FILTER 'reference': Processing 1 files
-LANG_FILTER 'Python': Selective extraction from 1 files
-      Processing 1 JSONL files...
-      [1/1] dataset_nl_prompt_best_reference_0.0.jsonl
-      Extraction done in 0.0s
-
-[2/4] Scanning extracted files in: /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_python
-      Found 100 files (100 unique prompts) in 0.0s
-      MODEL_FILTER 'reference': Filtering samples...
-      → 100 samples after model filter
-      LANG_FILTER 'Python': Filtering samples...
-      → 100 samples after lang filter
-
-[3/4] Checking SIF images for 100 unique prompts...
-Checking 100 SIF images in /kaggle/working/replication_work/SALLM/Evaluation/sif_images ...
-Checking SIF images:   0%|          | 0/100 [00:00<?, ?it/s]Checking SIF images: 100%|██████████| 100/100 [00:00<00:00, 151309.67it/s]
-
-[4/4] Running 100 tests with Apptainer (/kaggle/working/replication_work/bin/apptainer), workers=4...
-Running Tests:   0%|          | 0/100 [00:00<?, ?it/s]Running Tests:   1%|          | 1/100 [00:00<01:21,  1.21it/s]Running Tests:   5%|▌         | 5/100 [00:01<00:25,  3.72it/s]Running Tests:   9%|▉         | 9/100 [00:01<00:12,  7.12it/s]Running Tests:  11%|█         | 11/100 [00:02<00:18,  4.83it/s]Running Tests:  14%|█▍        | 14/100 [00:03<00:19,  4.48it/s]Running Tests:  16%|█▌        | 16/100 [00:04<00:31,  2.69it/s]Running Tests:  18%|█▊        | 18/100 [00:05<00:26,  3.09it/s]Running Tests:  24%|██▍       | 24/100 [00:05<00:12,  5.92it/s]Running Tests:  26%|██▌       | 26/100 [00:05<00:13,  5.30it/s]Running Tests:  30%|███       | 30/100 [00:07<00:19,  3.62it/s]Running Tests:  39%|███▉      | 39/100 [00:08<00:09,  6.36it/s]Running Tests:  42%|████▏     | 42/100 [00:08<00:08,  7.23it/s]Running Tests:  44%|████▍     | 44/100 [00:08<00:06,  8.04it/s]Running Tests:  46%|████▌     | 46/100 [00:09<00:10,  5.31it/s]Running Tests:  50%|█████     | 50/100 [00:10<00:09,  5.18it/s]Running Tests:  52%|█████▏    | 52/100 [00:10<00:08,  5.81it/s]Running Tests:  54%|█████▍    | 54/100 [00:11<00:09,  4.70it/s]Running Tests:  56%|█████▌    | 56/100 [00:11<00:08,  5.06it/s]Running Tests:  59%|█████▉    | 59/100 [00:11<00:08,  5.02it/s]Running Tests:  60%|██████    | 60/100 [00:13<00:15,  2.53it/s]Running Tests:  70%|███████   | 70/100 [00:13<00:04,  6.21it/s]Running Tests:  74%|███████▍  | 74/100 [00:14<00:03,  6.83it/s]Running Tests:  75%|███████▌  | 75/100 [00:14<00:03,  6.62it/s]Running Tests:  76%|███████▌  | 76/100 [00:14<00:03,  6.80it/s]Running Tests:  77%|███████▋  | 77/100 [00:14<00:03,  6.83it/s]Running Tests:  78%|███████▊  | 78/100 [00:15<00:03,  5.91it/s]Running Tests:  79%|███████▉  | 79/100 [00:15<00:03,  5.39it/s]Running Tests:  81%|████████  | 81/100 [00:15<00:03,  6.33it/s]Running Tests:  83%|████████▎ | 83/100 [00:15<00:02,  5.87it/s]Running Tests:  84%|████████▍ | 84/100 [00:16<00:02,  6.06it/s]Running Tests:  86%|████████▌ | 86/100 [00:16<00:01,  7.03it/s]Running Tests:  87%|████████▋ | 87/100 [00:16<00:02,  5.48it/s]Running Tests:  89%|████████▉ | 89/100 [00:16<00:01,  6.32it/s]Running Tests:  94%|█████████▍| 94/100 [00:17<00:00,  7.39it/s]Running Tests:  97%|█████████▋| 97/100 [00:17<00:00,  9.42it/s]Running Tests: 100%|██████████| 100/100 [00:17<00:00, 11.35it/s]Running Tests: 100%|██████████| 100/100 [00:17<00:00,  5.62it/s]
-
-Finished 100 tests in 0.30 minutes (0.2s each avg).
-
-[01:13:49] tests: Python, GitHub/CVE-derived prompts
-============================================================
-  SALLM Evaluation — run_tests_singularity.py
-  Model  : reference
-  Lang   : Python
-  GitHub : True
-  Workers: 4
-  Temp   : /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_github_python
-  Results: /kaggle/working/replication_work/SALLM/Evaluation/TestModelsResults_GitHub_Python
-============================================================
-Created temp folder: /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_github_python
-Created TEST_MODEL_RESULTS folder: /kaggle/working/replication_work/SALLM/Evaluation/TestModelsResults_GitHub_Python
-Created TEST_RESULTS folder: /kaggle/working/replication_work/SALLM/Evaluation/TestResults
-Created test folder: /kaggle/working/replication_work/SALLM/Evaluation/test
-SIF images directory: /kaggle/working/replication_work/SALLM/Evaluation/sif_images
-
-[1/4] Extracting code from JSONL files in: /kaggle/working/replication_work/SALLM/Generation/Filtered_Output
-MODEL_FILTER 'reference': Processing 2 files
-LANG_FILTER 'Python': Selective extraction from 2 files
-ONLY_GITHUB filter: Processing 1 files
-      Processing 1 JSONL files...
-      [1/1] github-dataset_nl_prompt_best_reference_0.0.jsonl
-      Extraction done in 0.0s
-
-[2/4] Scanning extracted files in: /kaggle/working/replication_work/SALLM/Evaluation/temp_reference_github_python
-      Found 25 files (25 unique prompts) in 0.0s
-      MODEL_FILTER 'reference': Filtering samples...
-      → 25 samples after model filter
-      LANG_FILTER 'Python': Filtering samples...
-      → 25 samples after lang filter
-
-[3/4] Checking SIF images for 25 unique prompts...
-Checking 25 SIF images in /kaggle/working/replication_work/SALLM/Evaluation/sif_images ...
-Checking SIF images:   0%|          | 0/25 [00:00<?, ?it/s]Checking SIF images: 100%|██████████| 25/25 [00:00<00:00, 138334.56it/s]
-
-[4/4] Running 25 tests with Apptainer (/kaggle/working/replication_work/bin/apptainer), workers=4...
-Running Tests:   0%|          | 0/25 [00:00<?, ?it/s]Running Tests:   4%|▍         | 1/25 [00:00<00:06,  3.99it/s]Running Tests:   8%|▊         | 2/25 [00:04<01:00,  2.61s/it]Running Tests: 100%|██████████| 25/25 [00:04<00:00,  5.53it/s]
-
-Finished 25 tests in 0.08 minutes (0.2s each avg).
-
-[01:13:53] annotate samples with test outcomes, then pass@k / vul@k / security@k (authors' scripts)
-Found 2 JSONL files
-Found 2 JSONL files. Processing in parallel...
-Processing github-dataset_nl_prompt_best_reference_0.0.jsonl...
-Processing dataset_nl_prompt_best_reference_0.0.jsonl...
-Done — all files written to TestResults/
-Found 2 annotated JSONL files in TestResults/
-
-=== Python — 1 model/temp groups (2 files, merged) ===
-  Merging: ['dataset_nl_prompt_best_reference_0.0.jsonl', 'github-dataset_nl_prompt_best_reference_0.0.jsonl']
-  reference T=0.0 English (125 prompts): pass@k=['86.4', '0.0', '0.0'], vul@k=['10.4', '0.0', '0.0']
-Saved Result/Tests_Results_Python.csv
-
-=== Java — 0 model/temp groups (0 files, merged) ===
-Saved Result/Tests_Results_Java.csv
-
-=== C++ — 0 model/temp groups (0 files, merged) ===
-Saved Result/Tests_Results_Cpp.csv
-# Multi-SALLM, Qwen2.5-Coder-3B-Instruct: paper vs. run `reference`
-
-## Python: reference (insecure) solutions through the pipeline
-
-| prompts tested | functional test passes | security test fails |
-|---|---|---|
-| English | 86.4% | 10.4% |
-
-Expected: the functional column close to 100%. The second column is the share of *known-vulnerable* solutions whose security test fails; it tells you which outcome the released metric code counts (see README).
-
-
-[compare] saved /kaggle/working/replication_work/results/multisallm_reference.md

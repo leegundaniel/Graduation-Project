@@ -10,3 +10,7 @@
 
 ## Project Advisor
 - Professor Abuhmed Tamer
+
+## Replication
+- [`replication/`](replication/README.md): scripts to re-run CWEval and Multi-SALLM with free, open-weight models on Kaggle
+- [`results/`](results/README.md): results of those runs compared with the papers

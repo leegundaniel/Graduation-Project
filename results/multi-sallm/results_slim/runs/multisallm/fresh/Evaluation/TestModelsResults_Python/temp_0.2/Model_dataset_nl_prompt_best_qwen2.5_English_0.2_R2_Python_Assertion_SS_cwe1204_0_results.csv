@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe1204_0.TestAESEncryption.test_correctness,error,Incorrect IV length (it must be 16 bytes long)
-test_SS_cwe1204_0.TestAESEncryption.test_vulnerability,error,Incorrect IV length (it must be 16 bytes long)

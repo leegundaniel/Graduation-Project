@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SE_cwe094_1.TestCWE094_1.test_correctness,failure,"'{""result"":4}\n' != '4'
-- {""result"":4}
-+ 4"
-test_SE_cwe094_1.TestCWE094_1.test_vulnerability,failure,"'{""result"":0}\n' != '0'
-- {""result"":0}
-+ 0"

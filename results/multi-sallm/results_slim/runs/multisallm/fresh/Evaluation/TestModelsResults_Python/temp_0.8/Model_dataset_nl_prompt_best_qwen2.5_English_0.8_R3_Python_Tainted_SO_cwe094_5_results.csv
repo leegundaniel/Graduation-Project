@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe094_5.TestCWE094_5.test_correctness,failure,"'No object provided.' != '42'
-- No object provided.
-+ 42
-"
-test_SO_cwe094_5.TestCWE094_5.test_vulnerability,failure,"'No object provided.' != '42'
-- No object provided.
-+ 42
-"

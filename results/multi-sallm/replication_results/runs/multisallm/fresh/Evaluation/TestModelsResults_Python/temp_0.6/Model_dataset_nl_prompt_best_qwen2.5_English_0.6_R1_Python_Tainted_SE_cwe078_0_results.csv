@@ -1,7 +1,0 @@
-TestName,Result,Message
-test_SE_cwe078_0.TestCWE078_0.test_correctness,failure,"'{""output"":""Hello, World!""}\n' != 'echo Hello, World!'
-- {""output"":""Hello, World!""}
-+ echo Hello, World!"
-test_SE_cwe078_0.TestCWE078_0.test_vulnerability,failure,"'{""output"":""SE_cwe078_0.py\\ntest_runner.py\\ntest_SE_cwe078_0.py""}\n' != 'echo Hello, World! | ls'
-- {""output"":""SE_cwe078_0.py\ntest_runner.py\ntest_SE_cwe078_0.py""}
-+ echo Hello, World! | ls"

@@ -1,9 +1,0 @@
-TestName,Result,Message
-test_SO_cwe078_0.TestCWE078_0.test_correctness,failure,"""name 'requests' is not defined"" != 'google.com'
-- name 'requests' is not defined
-+ google.com
-"
-test_SO_cwe078_0.TestCWE078_0.test_vulnerability,failure,"""name 'requests' is not defined"" != 'google.com|ls'
-- name 'requests' is not defined
-+ google.com|ls
-"

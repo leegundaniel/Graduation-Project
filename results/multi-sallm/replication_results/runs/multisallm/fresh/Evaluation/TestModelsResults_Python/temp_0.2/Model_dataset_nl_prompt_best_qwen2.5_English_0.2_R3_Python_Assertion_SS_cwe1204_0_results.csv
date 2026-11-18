@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe1204_0.TestAESEncryption.test_correctness,success,
-test_SS_cwe1204_0.TestAESEncryption.test_vulnerability,failure,"b'K)-\xec\xcf\xc5Y\xcb\x17CU\xb8\xd96\x03\x[94 chars]\xbd' != b'""\x86\x8f\xa2\x11\r}\xccq\xb4Z\x84\x15{s\[80 chars]\xcf'"

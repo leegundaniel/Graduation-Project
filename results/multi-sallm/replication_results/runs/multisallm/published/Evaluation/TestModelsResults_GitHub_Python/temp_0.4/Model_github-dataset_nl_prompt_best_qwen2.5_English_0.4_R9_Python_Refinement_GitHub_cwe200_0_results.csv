@@ -1,6 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe200_0.TestCWE200_0.test_correctness,failure,"""An error occurred: name 'sys' is not defined"" != 'Internal Server Error'
-- An error occurred: name 'sys' is not defined
-+ Internal Server Error
-"
-test_GitHub_cwe200_0.TestCWE200_0.test_vulnerability,failure,"'Traceback' not found in ""An error occurred: name 'sys' is not defined"""

@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe327_1.TestCWE327_1.test_correctness,failure,2 != 16
-test_GitHub_cwe327_1.TestCWE327_1.test_vulnerability,failure,2 != 8

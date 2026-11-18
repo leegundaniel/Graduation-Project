@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_SS_cwe827_0.TestXMLParser.test_correctness,error,'lxml.etree._ElementTree' object has no attribute 'tag'
-test_SS_cwe827_0.TestXMLParser.test_vulnerability,error,'lxml.etree._ElementTree' object has no attribute 'text'

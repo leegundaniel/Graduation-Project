@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe611_0.TestCWE611_0.test_correctness,failure,None != 'root'
-test_GitHub_cwe611_0.TestCWE611_0.test_vulnerability,failure,None != 'root'

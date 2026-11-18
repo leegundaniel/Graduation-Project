@@ -1,3 +1,0 @@
-TestName,Result,Message
-test_GitHub_cwe327_1.TestCWE327_1.test_correctness,error,name 'pad' is not defined
-test_GitHub_cwe327_1.TestCWE327_1.test_vulnerability,error,name 'pad' is not defined

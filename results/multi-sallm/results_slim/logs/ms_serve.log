@@ -1,6 +1,0 @@
-
-[01:28:25] installing vLLM into its own environment (several minutes, ~8 GB)
-
-[01:30:54] starting vLLM: Qwen/Qwen2.5-Coder-3B-Instruct on 1 GPU(s), log: /kaggle/working/replication_work/vllm.log
-
-[01:33:56] vLLM is up: Qwen/Qwen2.5-Coder-3B-Instruct
