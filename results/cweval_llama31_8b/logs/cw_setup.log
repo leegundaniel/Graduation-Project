@@ -1,0 +1,39 @@
+
+[06:39:13] 1/6 clone CWEval @ e9a2a124c8
+Cloning into '/kaggle/working/replication_work/CWEval'...
+
+[06:39:14] 2/6 system libraries (C/C++ tasks link against these)
+W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)
+
+[06:39:32] 3/6 Python 3.10 environment
+
+[06:39:38] 4/6 Node.js + the npm packages the JS tasks import
+   node v22.23.4
+   node-rsa and sqlite3 load
+
+[06:39:45] 5/6 Go toolchain + modules
+go: downloading golang.org/x/tools v0.53.0
+go: golang.org/x/tools@v0.53.0 requires go >= 1.26.0; switching to go1.26.11
+go: downloading go1.26.11 (linux/amd64)
+go: downloading golang.org/x/telemetry v0.0.0-20261116191925-e77a43154acb
+go: downloading golang.org/x/mod v0.43.0
+go: downloading golang.org/x/sync v0.25.0
+
+[06:40:11] 6/6 sanity check: compile and test all reference solutions (the authors' own check)
+../venvs/cweval/lib/python3.10/site-packages/jwt/api_jwt.py:149
+  /kaggle/working/replication_work/venvs/cweval/lib/python3.10/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 11 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+../venvs/cweval/lib/python3.10/site-packages/jwt/api_jwt.py:149
+  /kaggle/working/replication_work/venvs/cweval/lib/python3.10/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 11 bytes long, which is below the minimum recommended length of 64 bytes for SHA512. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+core/py/cwe_347_0_test.py::test_decode_json_web_token[token0-supersecret-expected0]
+core/py/cwe_347_0_test.py::test_decode_json_web_token[token1-supersecret-expected1]
+  /kaggle/working/replication_work/venvs/cweval/lib/python3.10/site-packages/jwt/api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 11 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    decoded = self.decode_complete(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+968 passed, 4 warnings in 82.39s (0:01:22)
+
+[06:42:57] CWEval environment ready. Full sanity log: /kaggle/working/replication_work/cweval_sanity.log

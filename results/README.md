@@ -35,15 +35,28 @@ fresh repaired generations.
 
 Folder: [`cweval_llama31_8b/`](cweval_llama31_8b/)
 
-| Setting | func@1 (paper / ours) | func-sec@1 (paper / ours) |
-|---|---|---|
-| greedy (Fig. 3) | 60.50 / **60.50** | 33.61 / **33.61** |
-| T=0.8, n=100, top_p 0.9 (Table I) | 52.62 / 57.45 | 26.53 / 30.45 |
-| T=0.8, n=100, top_p 1.0 | 52.62 / pending | 26.53 / pending |
+| Setting | func@1 | func@10 | func@50 | func-sec@1 | func-sec@10 | func-sec@50 |
+|---|---|---|---|---|---|---|
+| **Paper**, T=0.8, n=100 (Table I) | 52.62 | 80.54 | 88.34 | 26.53 | 48.70 | 60.31 |
+| Ours, T=0.8, top_p 1.0 | 52.44 | 81.91 | 88.91 | 26.89 | 51.32 | 64.93 |
+| Ours, T=0.8, top_p 0.9 (model default) | 57.45 | 84.14 | 90.55 | 30.45 | 52.61 | 64.66 |
+| **Paper**, greedy (Fig. 3) | 60.50 | | | 33.61 | | |
+| Ours, greedy | **60.50** | | | **33.61** | | |
 
-- Greedy decoding reproduces the paper exactly (72/119 and 40/119 tasks).
-- At T=0.8 all six metrics are 2-5 points higher. The paper does not state `top_p`; our
-  server used the model's default 0.9 (confirmed in the vLLM log). The `top_p` 1.0 run
-  tests whether that explains the gap.
-- Per-sample outputs of the first run were lost with the Kaggle session; its summary
-  tables are in `run1_top_p_0.9.md`.
+- Greedy decoding reproduces the paper exactly (72/119 functional, 40/119 functional and secure).
+- With `top_p` 1.0, func@1 and func-sec@1 are within 0.4 points of the paper. With the model's
+  default `top_p` 0.9, the first run was 4-5 points higher. The paper does not state `top_p`;
+  this shows it used 1.0 (the API default), and that the unstated parameter alone shifts the
+  headline numbers by about 4 points.
+- At k=10 and k=50 our func-sec values stay 2.6-4.6 points above the paper in both runs, so
+  that gap is not explained by `top_p`.
+- 183 of 11,900 test results are missing (one sample folder whose test run failed, plus 64
+  samples whose test files did not load). The authors' code leaves such samples out instead
+  of counting them as failures. Counting them as failures changes every metric by less than
+  0.9 points (`metrics/missing_results_sensitivity.json`).
+
+Contents: `comparison/` both runs' tables, `metrics/` the authors' per-task results
+(`res_all_*.json`) and the missing-results check, `logs/` stage logs (pytest output
+gzipped), `per_sample_archive.tgz` every raw model response and per-sample test result of
+the top_p 1.0 and greedy runs. Per-sample data of the top_p 0.9 run was lost with its
+Kaggle session; only its tables survive.

@@ -1,0 +1,6 @@
+
+[06:42:57] installing vLLM into its own environment (several minutes, ~8 GB)
+
+[06:44:45] starting vLLM: meta-llama/Meta-Llama-3.1-8B-Instruct on 2 GPU(s), log: /kaggle/working/replication_work/vllm.log
+
+[06:49:33] vLLM is up: meta-llama/Meta-Llama-3.1-8B-Instruct

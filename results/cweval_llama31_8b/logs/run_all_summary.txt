@@ -1,0 +1,6 @@
+OK    cw_setup (224s)
+OK    cw_serve (396s)
+OK    cw_generate (7415s)
+OK    cw_serve_stop (5s)
+OK    cw_evaluate (3001s)
+OK    cw_compare (1s)

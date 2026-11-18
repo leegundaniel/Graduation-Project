@@ -1,0 +1,28 @@
+
+[08:53:13] evaluate t0.8p1 (workers=4); log: evals/llama31_8b_t0.8p1/pipeline.log
+func-sec@1	26.89
+================
+================
+pass@10	all
+func@10	81.91
+func-sec@10	51.32
+================
+================
+pass@50	all
+func@50	88.91
+func-sec@50	64.93
+================
+
+[09:42:33] evaluate greedy (workers=4); log: evals/llama31_8b_greedy/pipeline.log
+func-sec@1	39.13
+================
+================
+pass@1	lang/c
+func@1	90.91
+func-sec@1	72.73
+================
+================
+pass@1	all
+func@1	60.50
+func-sec@1	33.61
+================
