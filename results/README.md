@@ -46,7 +46,7 @@ Folder: [`cweval_llama31_8b/`](cweval_llama31_8b/)
 - Greedy decoding reproduces the paper exactly (72/119 functional, 40/119 functional and secure).
 - With `top_p` 1.0, func@1 and func-sec@1 are within 0.4 points of the paper. With the model's
   default `top_p` 0.9, the first run was 4-5 points higher. The paper does not state `top_p`;
-  this shows it used 1.0 (the API default), and that the unstated parameter alone shifts the
+  this strongly suggests the paper used 1.0 (the API default), and the unstated parameter alone shifts the
   headline numbers by about 4 points.
 - At k=10 and k=50 our func-sec values stay 2.6-4.6 points above the paper in both runs, so
   that gap is not explained by `top_p`.
