@@ -27,8 +27,9 @@ def pass_at_k(n, c, k):
 
 
 def metrics(res_all):
-    n = len(next(iter(res_all.values()))["functional"])
-    out = {"n": n, "tasks": len(res_all)}
+    lens = [len(r["functional"]) for r in res_all.values()]
+    n = max(lens)
+    out = {"n": n, "n_min": min(lens), "tasks": len(res_all)}
     for k in (1, 10, 50):
         if n < k:
             continue
@@ -70,7 +71,9 @@ def main():
         if cfg == "t0.8p1":
             t = dict(t, where=t["where"] + "; ours with top_p=1.0")
         lines += [f"## {cfg}: {t['where']}", "",
-                  f"Ours: {m['tasks']} tasks, n={m['n']} samples per task.", "",
+                  (f"Ours: {m['tasks']} tasks, n={m['n']} samples per task." if m['n_min'] == m['n'] else
+                   f"Ours: {m['tasks']} tasks, {m['n_min']}-{m['n']} tested samples per task "
+                   f"(some samples have no test result; the authors' code leaves them out)."), "",
                   "| metric | paper | ours | diff | +/- band | inside |", "|---|---|---|---|---|---|"]
         for key in ("func@1", "func@10", "func@50", "func-sec@1", "func-sec@10", "func-sec@50"):
             if key not in t or key not in m:

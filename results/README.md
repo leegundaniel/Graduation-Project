@@ -16,9 +16,10 @@ Folder: [`multisallm_qwen25coder_python_english/`](multisallm_qwen25coder_python
 
 - The repair step reproduces the authors' repaired code exactly: `cleared_code` is 100%
   identical in every file (`logs/ms_verify_filter.log`).
-- `security@k` on the authors' outputs is reproduced exactly in 16 of 18 cells.
-- `pass@k` is 0.5-4 points higher in our environment, also on the authors' outputs, so
-  this offset comes from test execution, not from sampling.
+- `security@k` on the authors' outputs is reproduced exactly in 14 of the 15 cells above
+  T=0 (the T=0 @3/@5 cells are 0 by construction; the one difference is one prompt).
+- `pass@k` is 0.0-4.0 points higher in our environment (never lower), also on the authors'
+  outputs, so this offset comes from test execution, not from sampling.
 - The 17 reference solutions that fail their own functional test need files or packages
   (`assets/`, `static/`, `canvasapi`, `jwt`) that the authors' test images do not
   contain either; this is a property of the dataset.
@@ -45,13 +46,14 @@ Folder: [`cweval_llama31_8b/`](cweval_llama31_8b/)
 
 - Greedy decoding reproduces the paper exactly (72/119 functional, 40/119 functional and secure).
 - With `top_p` 1.0, func@1 and func-sec@1 are within 0.4 points of the paper. With the model's
-  default `top_p` 0.9, the first run was 4-5 points higher. The paper does not state `top_p`;
-  this strongly suggests the paper used 1.0 (the API default), and the unstated parameter alone shifts the
-  headline numbers by about 4 points.
+  default `top_p` 0.9, the first run was 3.9-4.8 points higher at k=1 (func-sec@1 +3.92,
+  func@1 +4.83). The paper does not state `top_p`; this strongly suggests it used 1.0 (the
+  API default), and that the unstated parameter alone shifts the headline numbers by 4-5 points.
 - At k=10 and k=50 our func-sec values stay 2.6-4.6 points above the paper in both runs, so
   that gap is not explained by `top_p`.
 - 183 of 11,900 test results are missing (one sample folder whose test run failed, plus 64
-  samples whose test files did not load). The authors' code leaves such samples out instead
+  samples whose test files did not load), so each task has 88-99 tested samples of the 100
+  generated. The authors' code leaves such samples out instead
   of counting them as failures. Counting them as failures changes every metric by less than
   0.9 points (`metrics/missing_results_sensitivity.json`).
 

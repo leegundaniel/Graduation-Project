@@ -2,7 +2,8 @@
 
 ## t0.8p1: Table I (random sampling, n=100, temperature 0.8); ours with top_p=1.0
 
-Ours: 119 tasks, n=99 samples per task.
+Ours: 119 tasks, 100 samples generated per task; 88-99 per task have a test result
+(183 of 11,900 missing, see results/README.md).
 
 | metric | paper | ours | diff | +/- band | inside |
 |---|---|---|---|---|---|
